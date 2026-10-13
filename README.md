@@ -1,28 +1,40 @@
-# The Lantern Library
 
-A collection of 17 illustrated picture stories, each nine pages long, with a landing page that works like a small online library. Everything is plain HTML, CSS and a little JavaScript. There is no build step, no framework and no images to download, because every illustration is drawn in inline SVG.
+# 🏮 The Lantern Library
+ 
+*A little library of picture stories, for bedtime, rainy afternoons and the hours in between.*
+ 
+![Picture stories](https://img.shields.io/badge/picture-stories-hotpink?style=flat&labelColor=midnightblue)
+![Bedtime approved](https://img.shields.io/badge/bedtime-approved-orange?style=flat&labelColor=midnightblue)
+![Pure HTML CSS SVG](https://img.shields.io/badge/made_with-HTML_CSS_SVG-mediumaquamarine?style=flat&labelColor=midnightblue)
+![No build step](https://img.shields.io/badge/build_step-none-cornflowerblue?style=flat&labelColor=midnightblue)
+![Responsive](https://img.shields.io/badge/works_on-every_screen-mediumpurple?style=flat&labelColor=midnightblue)
+![Dark mode](https://img.shields.io/badge/dark_mode-yes-slategray?style=flat&labelColor=midnightblue)
+![Gentle motion](https://img.shields.io/badge/reduced_motion-respected-orchid?style=flat&labelColor=midnightblue)
+![Made with Claude](https://img.shields.io/badge/made_with-Claude-coral?style=flat&labelColor=midnightblue)
+ 
+</div>
 
-## What's in the folder
-
+## ✨ Once upon a time
+ 
+There was a library with no walls and a single lantern. Inside lived tides that got lost, foxes who kept echoes in jars, a ghost who was afraid of the dark, and a dragon who could only squeak.
+ 
+Every story is a picture book you scroll through, page by page. The pictures are drawn entirely in code, so there is nothing to download, nothing to install, and nothing to build. Open the lantern, pick a cover, and begin.
+ 
+## 📖 Opening the book
+ 
+- Open `index.html` in any modern browser.
+- Click a cover to start reading. Every story has a small **Library** button in the corner that carries you back to the shelves.
+Want to share it with the world? Drop the whole folder onto any static host, such as Netlify, GitHub Pages or Vercel, and keep `index.html` and the `stories` folder side by side so the paths stay happy.
+ 
 ```
 storybook-library/
-├── index.html          The landing page (loading screen, book covers, filters)
-├── README.md           This file
-└── stories/
-    ├── tide-storybook.html
-    ├── fox-echoes-storybook.html
-    └── ... 15 more story files
+├── index.html      the landing page: lantern loading screen, covers, filters
+├── README.md       you are here
+└── stories/        every picture book, one file each
 ```
 
-## How to open it
 
-1. Unzip the folder.
-2. Open `index.html` in any modern browser.
-3. Click a book cover to read that story. Every story has a "← Library" button in the top-left corner that brings you back.
-
-To put it online, upload the whole `storybook-library` folder to any static host (Netlify, GitHub Pages, Vercel, a plain web server). Keep `index.html` and the `stories` folder side by side so the links keep working.
-
-## The stories
+## 🕯️ On the shelves
 
 | # | Title | Mood | Notes |
 |---|-------|------|-------|
@@ -46,7 +58,7 @@ To put it online, upload the whole `storybook-library` folder to any static host
 
 Stories with a sequel are best read in order. Each sequel sits on the shelf right after the story it follows.
 
-## Features
+## 🧭 Features
 
 **Landing page**
 - A loading screen with a swaying lantern, shown once per browser session.
@@ -61,7 +73,7 @@ Stories with a sequel are best read in order. Each sequel sits on the shelf righ
 - Gentle animations such as floating, twinkling and flickering, which switch off when the device asks for reduced motion.
 - Automatic light and dark colour schemes.
 
-## How it behaves on different screens
+## 📚 Turning the pages; How it behaves on different screens
 
 - **Desktop and wide screens:** the picture is on one side and the story text on the other, like an open book.
 - **Phones and small tablets held upright:** each page is split into two full screens. The first shows only the illustration, edge to edge. The second shows only the story text, in a larger size.
@@ -69,7 +81,7 @@ Stories with a sequel are best read in order. Each sequel sits on the shelf righ
 
 The picture screen on small devices stretches the sky of each scene upward to fill the screen, so nothing gets cropped.
 
-## Adding a new story
+## ## 🖋️ Writing a new tale
 
 1. Copy any file in `stories/` and rename it, for example `my-story-storybook.html`.
 2. Replace the title, the text in each `<div class="card">`, and the SVG artwork in each `<div class="art">`.
@@ -78,13 +90,15 @@ The picture screen on small devices stretches the sky of each scene upward to fi
 
 Tags on a card (`data-tags="cozy adventure"`) control which filter buttons show it. The tags in use are `cozy`, `funny`, `adventure`, `spooky` and `sequel`.
 
-## Technical notes
+## 🔧 Behind the curtain; Technical notes
 
 - **Fonts** are loaded from Google Fonts, so they need an internet connection. Without one, the pages fall back to your system fonts and still work.
 - **Links:** each card in `index.html` has an `href` to a local story file and a `data-online` attribute. The `data-online` links are only used when the page is viewed inside Claude's preview, where it points to the hosted versions. On your own computer or host they are ignored.
 - **Storage:** the loading screen uses `sessionStorage` to remember it has already played. If storage is unavailable, the page still works.
 - **Browser support:** current versions of Chrome, Edge, Firefox and Safari.
 
-## Credits
-
-Written and illustrated with Claude, by Anthropic. All stories, characters and artwork are original.
+## 🌙 The end
+ 
+All stories, characters and pictures are original, written and illustrated with [Claude](https://www.anthropic.com/claude) by Anthropic.
+ 
+Close the book when you are sleepy. Open it again when you are not.
