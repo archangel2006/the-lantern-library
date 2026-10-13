@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wilbur Is Afraid of the Dark</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap">
+<style>
+:root{--paper:#f4f0fa;--text:#251a40;--accent:#8a3fc0;--glow:#ffd98a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#140e29;--text:#ece6fa;--accent:#c9a0ff}}
+:root[data-theme="dark"]{--paper:#140e29;--text:#ece6fa;--accent:#c9a0ff}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;scroll-snap-type:y proximity}
+*{box-sizing:border-box;margin:0}
+body{overflow-x:hidden;background:var(--paper);color:var(--text);font-family:"Newsreader",Georgia,serif}
+.spread{min-height:100vh;min-height:100svh;display:grid;grid-template-columns:1.1fr 1fr;background:var(--paper);scroll-snap-align:start}
+.spread.r .art{order:2}
+.art{position:relative;min-height:50vh;overflow:hidden;background:#1a1233}
+.art svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.card{display:flex;flex-direction:column;justify-content:center;padding:10vh 7vw;background:var(--paper);color:var(--text)}
+.card p{font-size:clamp(1.02rem,calc(.9vw + 1.5svh),1.5rem);line-height:1.65;max-width:32em}
+.card p+p{margin-top:1.1em}
+.card em{color:var(--accent)}
+.cover .card{background:#1a1233;color:#f4efff}
+.cover h1{font:400 clamp(2.8rem,6vw,6rem)/1 "Bagel Fat One",sans-serif;max-width:8ch}
+.cover p{font-size:1.25rem;font-style:italic;margin-top:24px;color:#c9b9ec}
+.cover .hint{font-size:1rem;font-style:normal;margin-top:6vh;color:var(--glow)}
+.end h2{font:400 clamp(2.4rem,5vw,4rem)/1 "Bagel Fat One",sans-serif;margin-top:.7em;color:var(--accent)}
+.say{font:400 34px "Bagel Fat One",sans-serif;fill:#f4efff}
+.float{animation:float 4.5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+.pulse{animation:pulse 3.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.55}}
+:focus-visible{outline:3px solid #8a3fc0;outline-offset:3px}
+@media (max-width:600px),(max-width:820px) and (orientation:portrait){.spread{grid-template-columns:1fr;grid-template-rows:minmax(32svh,1fr) auto}.spread.r .art{order:0}.art{min-height:0}.card{padding:4vh 7vw 6vh}.cover h1{font-size:clamp(2.6rem,14vw,4.6rem)}}
+@media (max-height:560px){.card{padding:5vh 5vw}.card p{font-size:clamp(.95rem,calc(.8vw + 2.4svh),1.2rem);line-height:1.5}.cover h1{font-size:clamp(2.2rem,9vh,3.6rem)}.cover .hint{margin-top:3vh}}
+@media (prefers-reduced-motion:reduce){.float,.pulse{animation:none}html{scroll-behavior:auto}}
+@supports (height:100dvh){.spread{min-height:100dvh}}
+@media (max-width:600px),(max-width:820px) and (orientation:portrait){.art{overflow:hidden}.card p{font-size:clamp(1rem,calc(1vw + 1.6svh),1.3rem)}}
+@media (max-width:600px),(max-width:820px) and (orientation:portrait){
+html{scroll-snap-type:y proximity}
+.spread,.spread.cover{display:block;min-height:0;position:static}
+.spread .art,.spread.cover .art{position:relative;inset:auto;display:block;min-height:100vh;min-height:100svh;min-height:100dvh;padding:0;scroll-snap-align:start}
+.spread .art svg,.spread.cover .art svg{position:absolute;inset:0;width:100%;height:100%;max-height:none;border-radius:0;box-shadow:none}
+.spread .card,.spread .page,.spread.cover .card,.spread.cover .page{position:relative;min-height:100vh;min-height:100svh;min-height:100dvh;padding:10vh 8vw;justify-content:center;scroll-snap-align:start}
+.spread .card p,.spread .page p{font-size:clamp(1.1rem,4.6vw,1.45rem);line-height:1.7}
+.spread.cover .card p,.spread.cover .page p{font-size:1.2rem}
+.spread.cover .page{background:#0a1f25;background-image:none}
+}
+</style>
+</head>
+<body><style>.lib-back{position:fixed;z-index:50;top:calc(10px + env(safe-area-inset-top,0px));left:10px;font:600 14px/1 Georgia,serif;text-decoration:none;color:#fff;background:rgba(23,19,47,.82);border:1px solid rgba(255,255,255,.35);padding:9px 14px;border-radius:99px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}.lib-back:hover{background:rgba(23,19,47,.95)}</style><a class="lib-back" href="../index.html">&larr; Library</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="gNightH" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#150f2e"/><stop offset="1" stop-color="#4a3478"/></linearGradient>
+<linearGradient id="gDeepH" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b0719"/><stop offset="1" stop-color="#241846"/></linearGradient>
+<linearGradient id="gDawnH" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b4a8f"/><stop offset="1" stop-color="#ffc98a"/></linearGradient>
+<radialGradient id="gGlowG"><stop offset="0" stop-color="#e8eeff" stop-opacity=".85"/><stop offset="1" stop-color="#e8eeff" stop-opacity="0"/></radialGradient>
+<g id="ghostbody"><path d="M-30 0V-52Q-30-94 0-94Q30-94 30-52V0L20-9L10 0L0-9L-10 0L-20-9Z" fill="#f4f1ff"/><ellipse cx="-33" cy="-34" rx="9" ry="5" fill="#f4f1ff"/><ellipse cx="33" cy="-34" rx="9" ry="5" fill="#f4f1ff"/><circle cx="-17" cy="-48" r="5" fill="#f6b6d0" opacity=".6"/><circle cx="17" cy="-48" r="5" fill="#f6b6d0" opacity=".6"/></g>
+<g id="ghost"><use href="#ghostbody"/><circle cx="-10" cy="-62" r="6" fill="#241846"/><circle cx="10" cy="-62" r="6" fill="#241846"/><circle cx="-8" cy="-64" r="2" fill="#fff"/><circle cx="12" cy="-64" r="2" fill="#fff"/><ellipse cy="-46" rx="4" ry="5" fill="#241846"/></g>
+<g id="ghostsleep"><use href="#ghostbody"/><path d="M-16-60Q-10-54-4-60M4-60Q10-54 16-60" stroke="#241846" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M-5-46Q0-42 5-46" stroke="#241846" stroke-width="2" fill="none"/></g>
+<g id="theo"><circle cy="-58" r="10" fill="#f0c9a0"/><path d="M-11-60Q-8-74 0-72Q10-74 11-60Q4-66-11-60Z" fill="#5a3a28"/><circle cx="-4" cy="-58" r="1.6" fill="#241846"/><circle cx="4" cy="-58" r="1.6" fill="#241846"/><path d="M-13-48H13L16-8H-16Z" fill="#4a6fb0"/><g fill="#ffe08a"><circle cx="-5" cy="-38" r="2"/><circle cx="5" cy="-26" r="2"/><circle cx="-6" cy="-18" r="2"/></g><rect x="-12" y="-8" width="9" height="10" fill="#4a6fb0"/><rect x="3" y="-8" width="9" height="10" fill="#4a6fb0"/><ellipse cx="-8" cy="3" rx="8" ry="4" fill="#c8553d"/><ellipse cx="8" cy="3" rx="8" ry="4" fill="#c8553d"/><path d="M13-40L26-34" stroke="#f0c9a0" stroke-width="5" stroke-linecap="round"/><rect x="24" y="-40" width="16" height="9" rx="2" fill="#9aa6b8"/></g>
+<polygon id="beam" points="0,-4 190,-40 190,32 0,5" fill="#fff3b0" opacity=".42"/>
+<g id="trunk"><rect x="-60" y="-44" width="120" height="44" rx="4" fill="#7a4a2b"/><rect x="-60" y="-56" width="120" height="14" rx="6" fill="#8a5a3a"/><path d="M-60-22H60" stroke="#4a2a1c" stroke-width="3"/><rect x="-7" y="-36" width="14" height="14" rx="2" fill="#e8b04a"/></g>
+<g id="candle"><rect x="-6" y="-30" width="12" height="30" fill="#fff1c9"/><path class="pulse" d="M0-30C-7-38-3-46 0-54C3-46 7-38 0-30Z" fill="#ffcf70"/></g>
+<g id="bedbase"><rect x="-90" y="-34" width="180" height="34" rx="6" fill="#6a4c93"/><rect x="-90" y="-70" width="24" height="70" rx="6" fill="#4a3470"/><rect x="66" y="-50" width="24" height="50" rx="6" fill="#4a3470"/></g>
+<path id="mound" d="M-70-34Q-20-96 66-34Z" fill="#8a6fd0"/>
+<g id="bat"><path d="M0 0Q-10-10-24-6Q-18 0-22 6Q-10 2 0 8Q10 2 22 6Q18 0 24-6Q10-10 0 0Z" fill="#0b0719"/></g>
+<g id="spider"><path d="M0-60V0" stroke="#bfb2e0" stroke-width="1.5"/><circle r="6" fill="#241846"/><path d="M-6-2L-14 4M-6 2L-13 10M6-2L14 4M6 2L13 10" stroke="#241846" stroke-width="1.5"/></g>
+<g id="moon"><circle r="44" fill="#e8e4ff"/><circle cx="14" cy="-8" r="38" fill="#cfc8f0" opacity=".5"/></g>
+<g id="stars" fill="#f4efff"><circle cx="60" cy="60" r="1.8"/><circle cx="170" cy="130" r="1.3"/><circle cx="260" cy="50" r="2"/><circle cx="360" cy="140" r="1.3"/><circle cx="450" cy="70" r="1.8"/><circle cx="540" cy="130" r="1.3"/><circle cx="110" cy="210" r="1.2"/><circle cx="500" cy="220" r="1.5"/></g>
+</defs>
+</svg>
+
+<main>
+<section class="spread cover">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A small friendly ghost floating in front of a house with a glowing attic window under a big moon">
+    <rect width="600" height="600" fill="url(#gNightH)"/><use href="#stars"/>
+    <g transform="translate(450 130)"><use href="#moon"/></g>
+    <g transform="translate(150 200) scale(.8)"><use href="#bat"/></g><g transform="translate(240 120) scale(.6)"><use href="#bat"/></g>
+    <rect x="190" y="380" width="220" height="150" fill="#2b2050"/><path d="M170 380L300 290L430 380Z" fill="#1c1438"/><rect x="270" y="320" width="60" height="44" rx="4" fill="#ffcf70"/><path d="M300 320V364M270 342H330" stroke="#1c1438" stroke-width="3"/><rect x="285" y="450" width="30" height="80" fill="#14102a"/>
+    <path d="M0 530H600V600H0Z" fill="#0f0a22"/>
+    <g transform="translate(300 520) scale(.01)"></g>
+    <circle class="pulse" cx="300" cy="440" r="130" fill="url(#gGlowG)" opacity=".5"/>
+    <g transform="translate(300 530) scale(2.3)"><use class="float" href="#ghost"/></g>
+  </svg></div>
+  <div class="card"><h1>Wilbur Is Afraid of the Dark</h1><p>A not-very-scary story from Number 13, Hollow Lane</p><p class="hint">Scroll to turn the page.</p></div>
+</section>
+
+<section class="spread">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A ghost floating in a moonlit attic going woooo">
+    <rect width="600" height="600" fill="url(#gNightH)"/>
+    <path d="M0 0L300 130L600 0M0 600V80M600 600V80" stroke="#2b2050" stroke-width="14" fill="none"/><path d="M120 40L300 130L480 40" stroke="#2b2050" stroke-width="10" fill="none"/>
+    <circle cx="300" cy="260" r="64" fill="#cfc8f0"/><circle cx="300" cy="260" r="64" fill="none" stroke="#2b2050" stroke-width="10"/><path d="M300 196V324M236 260H364" stroke="#2b2050" stroke-width="6"/>
+    <g transform="translate(110 70)"><use href="#spider"/></g>
+    <rect y="535" width="600" height="65" fill="#2b2050"/><path d="M0 560H600M200 535V600M420 535V600" stroke="#1c1438" stroke-width="3"/>
+    <g transform="translate(300 548) scale(2.2)"><use class="float" href="#ghost"/></g>
+    <text class="say" x="410" y="380" style="font-size:30px">wooo...</text>
+  </svg></div>
+  <div class="card"><p>Wilbur had haunted the attic of Number 13 for two hundred years, and he was very good at it. He could moan. He could rattle. He could drift through a wall without even saying sorry.</p><p>There was just one problem. When the lights went out, the dark was <em>really</em> dark, and Wilbur was afraid of it. Which is awkward, because ghosts only come out at night.</p></div>
+</section>
+
+<section class="spread r">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A ghost hiding in a trunk with only his eyes showing, next to a plug-in night-light">
+    <rect width="600" height="600" fill="url(#gDeepH)"/>
+    <g transform="translate(300 500) scale(2)"><use href="#ghost"/></g>
+    <g transform="translate(300 545) scale(2.4)"><use href="#trunk"/></g>
+    <g transform="translate(110 560)"><rect x="-14" y="-18" width="28" height="18" rx="4" fill="#cfc8f0"/><circle cy="-30" r="14" fill="#fff3b0"/><circle class="pulse" cy="-30" r="34" fill="url(#gGlowG)"/></g>
+    <g transform="translate(480 120) scale(.7)"><use href="#bat"/></g>
+  </svg></div>
+  <div class="card"><p>Every night he slept in an old trunk with the lid shut and one eye peeking out.</p><p>He had tried a night-light, but his hands went straight through it. He had tried counting sheep, but the sheep were also ghosts, and that was worse.</p></div>
+</section>
+
+<section class="spread">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A boy hiding under his blanket with only his eyes showing while the ceiling above rattles">
+    <rect width="600" height="600" fill="url(#gNightH)"/>
+    <rect x="410" y="150" width="110" height="150" rx="55" fill="#cfc8f0"/><rect x="410" y="150" width="110" height="150" rx="55" fill="none" stroke="#2b2050" stroke-width="8"/><g transform="translate(468 220) scale(.45)"><use href="#moon"/></g>
+    <g stroke="#e8e4ff" stroke-width="3" fill="none" opacity=".6" stroke-linecap="round"><path d="M150 120q10-10 20 0t20 0"/><path d="M260 90q10-10 20 0t20 0"/></g>
+    <text class="say" x="120" y="190" style="font-size:26px">rattle rattle</text>
+    <rect y="545" width="600" height="55" fill="#2b2050"/>
+    <g transform="translate(250 545) scale(1.9)"><use href="#bedbase"/><circle cx="-50" cy="-44" r="14" fill="#f0c9a0"/><circle cx="-56" cy="-46" r="4" fill="#fff"/><circle cx="-44" cy="-46" r="4" fill="#fff"/><circle cx="-55" cy="-46" r="2" fill="#241846"/><circle cx="-43" cy="-46" r="2" fill="#241846"/><use href="#mound"/></g>
+  </svg></div>
+  <div class="card"><p>One night, a family moved into Number 13. They had a boy named Theo, whose bedroom was right underneath the attic. Theo was afraid of ghosts.</p><p>He heard a rattling above his ceiling, and pulled the blanket up to his nose. Up in the attic, the rattling was only Wilbur’s knees, knocking together.</p></div>
+</section>
+
+<section class="spread r">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A boy with a flashlight and a ghost meeting in a dark hallway, both screaming">
+    <rect width="600" height="600" fill="url(#gDeepH)"/>
+    <rect y="535" width="600" height="65" fill="#241846"/>
+    <rect x="250" y="200" width="100" height="130" fill="#3a2a66" opacity=".5"/>
+    <polygon points="230,500 520,430 520,560" fill="#fff3b0" opacity=".3"/>
+    <g transform="translate(160 548) scale(2)"><use href="#theo"/></g>
+    <g transform="translate(450 540) scale(2.1)"><use href="#ghost"/></g>
+    <text class="say" x="80" y="320" style="fill:#ffd98a">AAAH!</text><text class="say" x="400" y="300" style="fill:#e8eeff">AAAH!</text>
+  </svg></div>
+  <div class="card"><p>Then a great storm rolled over Hollow Lane and every light on the street went out. Wilbur, trembling, floated downstairs to look for Theo’s night-light.</p><p>At the same moment, Theo crept into the hallway with his flashlight. They met at the bottom of the stairs. “AAAH!” said the ghost. “AAAH!” said the boy. The flashlight dropped, rolled away, and went out.</p></div>
+</section>
+
+<section class="spread">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="In total darkness a ghost glows softly like a night-light while a boy looks up in wonder">
+    <rect width="600" height="600" fill="url(#gDeepH)"/>
+    <circle class="pulse" cx="380" cy="440" r="260" fill="url(#gGlowG)"/>
+    <rect y="540" width="600" height="60" fill="#241846"/>
+    <g transform="translate(150 552) scale(2)"><use href="#theo"/></g>
+    <g transform="translate(380 548) scale(2.5)"><use class="float" href="#ghost"/></g>
+    <g transform="translate(500 565) rotate(10)"><rect width="34" height="12" rx="3" fill="#6a7488"/></g>
+  </svg></div>
+  <div class="card"><p>In the pitch dark, something strange happened. A soft, pale glow filled the hallway, like the moon behind a cloud.</p><p>“You’re… glowing,” said Theo. “I am?” said Wilbur. He looked down at himself, and for the first time in two hundred years, he opened both eyes. “I’m a night-light! I was the night-light all along!”</p></div>
+</section>
+
+<section class="spread r">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A boy and a ghost sitting together on the stairs during a storm with a flashlight between them">
+    <rect width="600" height="600" fill="url(#gNightH)"/>
+    <rect x="200" y="60" width="200" height="200" rx="100" fill="#cfc8f0" opacity=".8"/><rect x="200" y="60" width="200" height="200" rx="100" fill="none" stroke="#2b2050" stroke-width="10"/><path d="M300 60V260M200 160H400" stroke="#2b2050" stroke-width="6"/>
+    <g stroke="#bfb2e0" stroke-width="2" opacity=".5" stroke-linecap="round"><path d="M240 90l-8 22M280 110l-8 22M330 80l-8 22M360 130l-8 22"/></g>
+    <rect x="60" y="480" width="480" height="40" fill="#3a2a66"/><rect x="60" y="520" width="480" height="40" fill="#2b2050"/><rect x="60" y="560" width="480" height="40" fill="#241846"/>
+    <circle class="pulse" cx="390" cy="420" r="150" fill="url(#gGlowG)" opacity=".7"/>
+    <g transform="translate(200 484) scale(1.8)"><use href="#theo"/></g>
+    <g transform="translate(400 484) scale(1.9)"><use class="float" href="#ghost"/></g>
+  </svg></div>
+  <div class="card"><p>“You’re not very scary,” said Theo. “Thank you?” said Wilbur. “I’ve been practising for two hundred years.”</p><p>So they sat together on the stairs, the ghost lighting the way and the boy keeping him company, and they listened to the storm until it ran out of things to say.</p></div>
+</section>
+
+<section class="spread">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Morning light through a window with a boy and a ghost asleep on the stairs">
+    <rect width="600" height="600" fill="url(#gDawnH)"/>
+    <circle cx="300" cy="320" r="100" fill="#fff0b8" opacity=".9"/>
+    <rect x="200" y="60" width="200" height="200" rx="100" fill="#ffe3a8"/><rect x="200" y="60" width="200" height="200" rx="100" fill="none" stroke="#5b4a8f" stroke-width="10"/><path d="M300 60V260M200 160H400" stroke="#5b4a8f" stroke-width="6"/>
+    <rect x="60" y="480" width="480" height="40" fill="#8a6fb0"/><rect x="60" y="520" width="480" height="40" fill="#6a5290"/><rect x="60" y="560" width="480" height="40" fill="#523d78"/>
+    <g transform="translate(360 480) rotate(-90) scale(1.5)"><use href="#theo"/></g>
+    <g transform="translate(180 482) scale(1.9)"><use href="#ghostsleep"/></g>
+    <text class="say" x="215" y="360" style="font-size:26px;fill:#523d78">z z z</text>
+  </svg></div>
+  <div class="card"><p>When the morning came and the lights flickered back on, nobody noticed. Theo was asleep on the bottom step, and Wilbur was asleep beside him, snoring a little, in a very ghostly way.</p></div>
+</section>
+
+<section class="spread r end">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A boy happily tucked in bed while a friendly ghost glows softly at his bedside">
+    <rect width="600" height="600" fill="url(#gNightH)"/><use href="#stars"/>
+    <rect x="400" y="130" width="110" height="150" rx="55" fill="#cfc8f0"/><rect x="400" y="130" width="110" height="150" rx="55" fill="none" stroke="#2b2050" stroke-width="8"/><g transform="translate(455 200) scale(.45)"><use href="#moon"/></g>
+    <circle class="pulse" cx="400" cy="440" r="190" fill="url(#gGlowG)" opacity=".6"/>
+    <rect y="545" width="600" height="55" fill="#2b2050"/>
+    <g transform="translate(230 545) scale(1.9)"><use href="#bedbase"/><circle cx="-50" cy="-44" r="14" fill="#f0c9a0"/><circle cx="-55" cy="-46" r="2" fill="#241846"/><circle cx="-45" cy="-46" r="2" fill="#241846"/><path d="M-54-40Q-50-36-46-40" stroke="#241846" fill="none" stroke-width="1.5"/><g transform="translate(0 0) scale(1 .7)"><use href="#mound"/></g></g>
+    <g transform="translate(450 550) scale(2.1)"><use class="float" href="#ghost"/></g>
+    <text class="say" x="330" y="260" style="font-size:26px">boo.</text><text class="say" x="150" y="230" style="font-size:26px;fill:#ffd98a">boo yourself.</text>
+  </svg></div>
+  <div class="card"><p>Now, every night, Wilbur floats to Theo’s door and says “boo,” very gently. And Theo says, “boo yourself,” and goes to sleep with a ghost-shaped glow in the corner.</p><p>The house still creaks. The attic still rattles. But if you ever hear a knocking in the night, it is only Wilbur’s knees, and he would love it if you said goodnight.</p><h2>The End</h2></div>
+</section>
+</main>
+<script>(function(){
+var mq=window.matchMedia('(max-width:600px),(max-width:820px) and (orientation:portrait)');
+function fit(){
+ document.querySelectorAll('.art svg').forEach(function(s){
+  var vb=s.getAttribute('data-vb');if(!vb){vb=s.getAttribute('viewBox');s.setAttribute('data-vb',vb)}
+  var p=vb.split(' ').map(Number),w=p[2],h=p[3];
+  var bg=null,c=s.firstElementChild;
+  while(c&&c.tagName.toLowerCase()!=='rect'){c=c.nextElementSibling}
+  if(c&&(!c.getAttribute('x')||c.getAttribute('x')==='0')&&(!c.getAttribute('y')||c.getAttribute('y')==='0')&&+c.getAttribute('width')===w){bg=c;if(!bg.hasAttribute('data-h')){bg.setAttribute('data-h',bg.getAttribute('height'))}}
+  if(!mq.matches){s.setAttribute('viewBox',vb);s.setAttribute('preserveAspectRatio','xMidYMid slice');if(bg){bg.setAttribute('y','0');bg.setAttribute('height',bg.getAttribute('data-h'))}return}
+  var r=s.parentNode.getBoundingClientRect(),ratio=r.height/r.width,dy=Math.max(0,w*ratio-h);
+  s.setAttribute('viewBox','0 '+(-dy)+' '+w+' '+(h+dy));
+  s.setAttribute('preserveAspectRatio','xMidYMax slice');
+  if(bg){bg.setAttribute('y',String(-dy));bg.setAttribute('height',String(+bg.getAttribute('data-h')+dy))}
+ });
+}
+fit();window.addEventListener('resize',fit);window.addEventListener('orientationchange',fit);
+if(mq.addEventListener){mq.addEventListener('change',fit)}else if(mq.addListener){mq.addListener(fit)}
+})();</script>
+</body>
+</html>

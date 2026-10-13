@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Fox Who Kept Echoes</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap">
+<style>
+:root{--paper:#f3f0f8;--text:#231c3f;--accent:#c4561f;--glow:#ffd68a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#1a1438;--text:#ece8f6;--accent:#f0985f}}
+:root[data-theme="dark"]{--paper:#1a1438;--text:#ece8f6;--accent:#f0985f}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;scroll-snap-type:y proximity}
+*{box-sizing:border-box;margin:0}
+body{overflow-x:hidden;background:var(--paper);color:var(--text);font-family:"Newsreader",Georgia,serif}
+.spread{min-height:100vh;min-height:100svh;display:grid;grid-template-columns:1.1fr 1fr;background:var(--paper);scroll-snap-align:start}
+.spread.r .art{order:2}
+.art{position:relative;min-height:50vh;overflow:hidden;background:#150f2e}
+.art svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.card{display:flex;flex-direction:column;justify-content:center;padding:10vh 7vw;background:var(--paper);color:var(--text)}
+.card p{font-size:clamp(1.02rem,calc(.9vw + 1.5svh),1.5rem);line-height:1.65;max-width:32em}
+.card p+p{margin-top:1.1em}
+.card em{color:var(--accent)}
+.cover .card{background:#150f2e;color:#f1ecfb}
+.cover h1{font:400 clamp(3rem,6.5vw,6.5rem)/.95 "DM Serif Display",serif;letter-spacing:-.02em;max-width:8ch}
+.cover p{font-size:1.25rem;font-style:italic;margin-top:24px;color:#cfc6ea}
+.cover .hint{font-size:1rem;font-style:normal;margin-top:6vh;color:var(--glow)}
+.end h2{font:400 clamp(2.4rem,5vw,4rem)/1 "DM Serif Display",serif;margin-top:.7em;color:var(--accent)}
+.ring{transform-box:fill-box;transform-origin:center;animation:ring 3.6s ease-out infinite}
+@keyframes ring{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.25);opacity:0}}
+.snow{animation:fall 9s linear infinite}
+@keyframes fall{to{transform:translateY(40px)}}
+:focus-visible{outline:3px solid var(--glow);outline-offset:3px}
+@media (max-width:600px),(max-width:820px) and (orientation:portrait){.spread{grid-template-columns:1fr;grid-template-rows:minmax(32svh,1fr) auto}.spread.r .art{order:0}.art{min-height:0}.card{padding:4vh 7vw 6vh}.cover h1{font-size:clamp(2.8rem,15vw,5rem)}}
+@media (max-height:560px){.card{padding:5vh 5vw}.card p{font-size:clamp(.95rem,calc(.8vw + 2.4svh),1.2rem);line-height:1.5}.cover h1{font-size:clamp(2.4rem,9vh,4rem)}.cover .hint{margin-top:3vh}}
+@media (prefers-reduced-motion:reduce){.ring,.snow{animation:none}html{scroll-behavior:auto}}
+@supports (height:100dvh){.spread{min-height:100dvh}}
+@media (max-width:600px),(max-width:820px) and (orientation:portrait){.art{overflow:hidden}.card p{font-size:clamp(1rem,calc(1vw + 1.6svh),1.3rem)}}
+@media (max-width:600px),(max-width:820px) and (orientation:portrait){
+html{scroll-snap-type:y proximity}
+.spread,.spread.cover{display:block;min-height:0;position:static}
+.spread .art,.spread.cover .art{position:relative;inset:auto;display:block;min-height:100vh;min-height:100svh;min-height:100dvh;padding:0;scroll-snap-align:start}
+.spread .art svg,.spread.cover .art svg{position:absolute;inset:0;width:100%;height:100%;max-height:none;border-radius:0;box-shadow:none}
+.spread .card,.spread .page,.spread.cover .card,.spread.cover .page{position:relative;min-height:100vh;min-height:100svh;min-height:100dvh;padding:10vh 8vw;justify-content:center;scroll-snap-align:start}
+.spread .card p,.spread .page p{font-size:clamp(1.1rem,4.6vw,1.45rem);line-height:1.7}
+.spread.cover .card p,.spread.cover .page p{font-size:1.2rem}
+.spread.cover .page{background:#0a1f25;background-image:none}
+}
+</style>
+</head>
+<body><style>.lib-back{position:fixed;z-index:50;top:calc(10px + env(safe-area-inset-top,0px));left:10px;font:600 14px/1 Georgia,serif;text-decoration:none;color:#fff;background:rgba(23,19,47,.82);border:1px solid rgba(255,255,255,.35);padding:9px 14px;border-radius:99px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}.lib-back:hover{background:rgba(23,19,47,.95)}</style><a class="lib-back" href="../index.html">&larr; Library</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="gPlum" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#150f2e"/><stop offset="1" stop-color="#5b4d8a"/></linearGradient>
+<linearGradient id="gSnow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7f95b8"/><stop offset="1" stop-color="#e3ecf4"/></linearGradient>
+<linearGradient id="gDawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2f64"/><stop offset="1" stop-color="#f0a56b"/></linearGradient>
+<g id="fox"><path d="M-28-22C-72-18-84-62-54-72C-52-52-44-36-24-30Z" fill="#e07a3f"/><circle cx="-62" cy="-64" r="8" fill="#f7f1e6"/><ellipse cy="-22" rx="34" ry="20" fill="#e07a3f"/><ellipse cx="26" cy="-20" rx="10" ry="12" fill="#f7f1e6"/><path d="M26-52L28-74L40-54ZM38-54L46-74L50-50Z" fill="#e07a3f"/><circle cx="36" cy="-40" r="15" fill="#e07a3f"/><path d="M46-44L68-35L46-28Z" fill="#f7f1e6"/><circle cx="68" cy="-35" r="2.8" fill="#231c3f"/><circle cx="40" cy="-45" r="2" fill="#231c3f"/><rect x="-16" y="-6" width="9" height="10" fill="#4a2a1c"/><rect x="12" y="-6" width="9" height="10" fill="#4a2a1c"/></g>
+<g id="owl"><ellipse cy="-32" rx="26" ry="32" fill="#8c7a66"/><ellipse cy="-26" rx="18" ry="22" fill="#d9cdb8"/><path d="M-22-58L-14-70L-8-58ZM22-58L14-70L8-58Z" fill="#8c7a66"/><circle cx="-9" cy="-42" r="9" fill="#f6e3a0"/><circle cx="9" cy="-42" r="9" fill="#f6e3a0"/><circle cx="-9" cy="-42" r="4" fill="#231c3f"/><circle cx="9" cy="-42" r="4" fill="#231c3f"/><path d="M-4-34L4-34L0-26Z" fill="#e0993f"/></g>
+<g id="jar"><rect x="-13" y="-36" width="26" height="36" rx="6" fill="#cfe3ee" fill-opacity=".3" stroke="#cfe3ee" stroke-width="1.5"/><rect x="-9" y="-43" width="18" height="8" rx="2" fill="#a67c52"/><circle cy="-18" r="9" fill="#ffd68a"/></g>
+<g id="rings" fill="none" stroke="#ffd68a" stroke-width="3"><circle class="ring" r="30"/><circle class="ring" r="30" style="animation-delay:1.2s"/><circle class="ring" r="30" style="animation-delay:2.4s"/></g>
+<g id="pine"><path d="M0-96L24-46H-24ZM0-74L30-22H-30ZM0-48L38 6H-38Z" fill="#1c4540"/><path d="M0-96L12-70H-12Z" fill="#e8f0f6"/><rect x="-5" y="6" width="10" height="16" fill="#3b2a22"/></g>
+<g id="stars" fill="#f1ecfb"><circle cx="60" cy="60" r="1.6"/><circle cx="170" cy="120" r="1.2"/><circle cx="260" cy="50" r="1.8"/><circle cx="360" cy="140" r="1.2"/><circle cx="450" cy="70" r="1.6"/><circle cx="540" cy="130" r="1.2"/><circle cx="110" cy="200" r="1"/><circle cx="500" cy="210" r="1.4"/></g>
+<g id="flakes" fill="#fff"><circle cx="40" cy="30" r="3"/><circle cx="120" cy="90" r="2"/><circle cx="200" cy="10" r="3"/><circle cx="280" cy="120" r="2"/><circle cx="360" cy="50" r="3"/><circle cx="440" cy="110" r="2"/><circle cx="520" cy="20" r="3"/><circle cx="80" cy="160" r="2"/><circle cx="240" cy="190" r="3"/><circle cx="400" cy="200" r="2"/><circle cx="560" cy="170" r="3"/></g>
+</defs>
+</svg>
+
+<main>
+<section class="spread cover">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A fox sits in the snow beside a row of glowing jars under a huge moon">
+    <rect width="600" height="600" fill="url(#gPlum)"/><use href="#stars"/>
+    <circle cx="300" cy="230" r="90" fill="#f7f1e6"/><circle cx="330" cy="215" r="82" fill="#5b4d8a" opacity=".14"/>
+    <path d="M0 440Q150 400 300 440T600 430V600H0Z" fill="#e3ecf4"/>
+    <use href="#pine" transform="translate(90 440) scale(1.4)"/><use href="#pine" transform="translate(520 450) scale(1.2)"/>
+    <g transform="translate(300 480) scale(1.8)"><use href="#fox"/></g>
+    <use href="#jar" transform="translate(150 490) scale(1.3)"/><use href="#jar" transform="translate(440 495) scale(1.3)"/>
+  </svg></div>
+  <div class="card"><h1>The Fox Who Kept Echoes</h1><p>A winter story from Hollow Valley</p><p class="hint">Scroll to turn the page.</p></div>
+</section>
+
+<section class="spread">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A fox in a cave mouth beside a ledge of glowing jars, with a small village far below">
+    <rect width="600" height="600" fill="url(#gPlum)"/><use href="#stars"/>
+    <path d="M0 470Q150 440 300 480T600 460V600H0Z" fill="#3a2f64"/>
+    <g fill="#ffd68a"><rect x="60" y="500" width="5" height="5"/><rect x="95" y="508" width="5" height="5"/><rect x="480" y="498" width="5" height="5"/><rect x="520" y="506" width="5" height="5"/></g>
+    <path d="M150 470V300Q300 170 450 300V470Z" fill="#1c1538"/><path d="M150 470V300Q300 170 450 300V470Z" fill="none" stroke="#5b4d8a" stroke-width="6"/>
+    <rect x="200" y="380" width="200" height="8" fill="#6b5b3f"/>
+    <use href="#jar" transform="translate(235 380)"/><use href="#jar" transform="translate(300 380)"/><use href="#jar" transform="translate(365 380)"/>
+    <g transform="translate(300 470) scale(1.5)"><use href="#fox"/></g>
+  </svg></div>
+  <div class="card"><p>High above Hollow Valley, in a cave with a very good view, lived a fox named Juniper who collected echoes.</p><p>She caught them in glass jars and stopped them with corks, and she kept them in a row along her ledge, where they glowed like small lamps.</p></div>
+</section>
+
+<section class="spread r">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Three glowing jars with sound rings spreading out of them">
+    <rect width="600" height="600" fill="url(#gPlum)"/><use href="#stars"/>
+    <path d="M0 460Q150 430 300 465T600 450V600H0Z" fill="#e3ecf4" opacity=".9"/>
+    <g transform="translate(190 360)"><use href="#rings"/></g><g transform="translate(300 330)"><use href="#rings"/></g><g transform="translate(410 360)"><use href="#rings"/></g>
+    <g transform="translate(190 460) scale(2.2)"><use href="#jar"/></g><g transform="translate(300 450) scale(2.2)"><use href="#jar"/></g><g transform="translate(410 460) scale(2.2)"><use href="#jar"/></g>
+  </svg></div>
+  <div class="card"><p>She had the echo of the church bell, the long, round note that rolled down from the ridge. She had the echo of the waterfall, which sounded like someone laughing in a bucket. And she had the echo of wind in the pines, her favourite, though she could never say why.</p><p>The valley folk thought it a peculiar hobby. Juniper thought it was only good manners to keep what the valley forgot.</p></div>
+</section>
+
+<section class="spread">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A silent valley under heavy snowfall with snow-covered pines">
+    <rect width="600" height="600" fill="url(#gSnow)"/>
+    <g class="snow"><use href="#flakes"/><use href="#flakes" transform="translate(0 200)"/><use href="#flakes" transform="translate(0 400)"/></g>
+    <path d="M0 430Q150 390 300 430T600 410V600H0Z" fill="#f2f6fa"/>
+    <use href="#pine" transform="translate(180 440) scale(1.5)"/><use href="#pine" transform="translate(300 450) scale(1.8)"/><use href="#pine" transform="translate(430 440) scale(1.4)"/>
+  </svg></div>
+  <div class="card"><p>Then came the great snow. It fell for three days and three nights, and snow, as everyone knows, swallows sound.</p><p>The bell went mute. The waterfall froze. The pines stood still, with nothing at all to say.</p></div>
+</section>
+
+<section class="spread r">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A small owl alone in the snow, its call fading away">
+    <rect width="600" height="600" fill="url(#gSnow)"/>
+    <g class="snow"><use href="#flakes"/><use href="#flakes" transform="translate(0 220)"/></g>
+    <path d="M0 440Q150 410 300 440T600 425V600H0Z" fill="#f2f6fa"/>
+    <rect x="240" y="400" width="120" height="14" rx="6" fill="#4a3a30"/>
+    <g transform="translate(300 400) scale(1.6)"><use href="#owl"/></g>
+    <g transform="translate(300 330)" opacity=".5"><circle r="40" fill="none" stroke="#231c3f" stroke-width="2" stroke-dasharray="4 8"/><circle r="70" fill="none" stroke="#231c3f" stroke-width="2" stroke-dasharray="4 14" opacity=".5"/></g>
+  </svg></div>
+  <div class="card"><p>Down in the white hush sat a young owl named Pell, who had gone out to practise flying and landed somewhere he did not know.</p><p>“Mama!” he hooted. But the snow ate the sound before it left his beak. Far away, his mother called back, and the snow ate that too.</p></div>
+</section>
+
+<section class="spread">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A fox uncorking a jar on a ridge as the echo of a bell rolls out in big rings">
+    <rect width="600" height="600" fill="url(#gPlum)"/><use href="#stars"/>
+    <path d="M0 450Q150 390 300 440T600 420V600H0Z" fill="#e3ecf4"/>
+    <g transform="translate(360 330) scale(3)"><use href="#rings"/></g>
+    <g transform="translate(250 470) scale(1.7)"><use href="#fox"/></g>
+    <g transform="translate(365 440) scale(1.8)"><use href="#jar"/></g>
+  </svg></div>
+  <div class="card"><p>Juniper, up in her cave, heard nothing, and heard it loudly. She looked at her jars. Then she carried them down to the ridge, pulled out the first cork, and the bell rolled across the whole valley, as big as it had ever been.</p></div>
+</section>
+
+<section class="spread r">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Three rings of sound across the valley forming a path for an owl to follow">
+    <rect width="600" height="600" fill="url(#gPlum)"/><use href="#stars"/>
+    <path d="M0 470Q150 440 300 470T600 450V600H0Z" fill="#e3ecf4"/>
+    <path d="M170 330Q250 270 300 300T430 330" fill="none" stroke="#ffd68a" stroke-width="2" stroke-dasharray="3 9" opacity=".7"/>
+    <g transform="translate(170 340)"><use href="#rings"/></g><g transform="translate(300 310)"><use href="#rings"/></g><g transform="translate(430 340)"><use href="#rings"/></g>
+    <g transform="translate(470 250) scale(1.3)"><use href="#owl"/></g>
+    <g transform="translate(180 470) scale(1.1)"><use href="#owl"/></g>
+    <use href="#pine" transform="translate(270 470) scale(1.4)"/><use href="#pine" transform="translate(400 470) scale(1.2)"/>
+  </svg></div>
+  <div class="card"><p>Pell’s mother heard it. She turned her head and flew toward the bell. Then Juniper opened the waterfall, and the owl turned again. Then she opened the wind in the pines, and the owl followed it down.</p><p>Pell heard them too, and stumbled toward every sound he knew. Bell, then water, then wind: the valley had a map again, made of sounds.</p></div>
+</section>
+
+<section class="spread">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A mother owl wrapping her chick in her wings at dawn while a fox watches from far away">
+    <rect width="600" height="600" fill="url(#gDawn)"/><circle cx="300" cy="400" r="80" fill="#ffd68a" opacity=".5"/>
+    <path d="M0 450Q150 420 300 450T600 435V600H0Z" fill="#f0e6e3"/>
+    <use href="#pine" transform="translate(170 470) scale(1.6)"/><use href="#pine" transform="translate(440 470) scale(1.5)"/>
+    <g transform="translate(300 470) scale(2)"><use href="#owl"/></g>
+    <g transform="translate(300 470) scale(.75)"><use href="#owl"/></g>
+    <g transform="translate(500 330) scale(.6)"><use href="#fox"/></g>
+  </svg></div>
+  <div class="card"><p>They met under the pines at dawn. The mother owl folded Pell inside her wings so completely that only his beak showed, and he said something small and muffled, which sounded very much like “sorry.”</p><p>Juniper watched from the ridge with her tail wrapped round her feet, and pretended she was not crying.</p></div>
+</section>
+
+<section class="spread r end">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="An empty ledge with one new glowing jar while sound rings drift over the snowy valley">
+    <rect width="600" height="600" fill="url(#gPlum)"/><use href="#stars"/>
+    <circle cx="460" cy="150" r="40" fill="#f7f1e6"/>
+    <path d="M150 470V300Q300 170 450 300V470Z" fill="#1c1538"/>
+    <rect x="200" y="380" width="200" height="8" fill="#6b5b3f"/>
+    <use href="#jar" transform="translate(300 380) scale(1.3)"/>
+    <g transform="translate(300 362)"><use href="#rings"/></g>
+    <path d="M0 470Q150 440 300 475T600 455V600H0Z" fill="#e3ecf4"/>
+    <g transform="translate(220 480) scale(1.5)"><use href="#fox"/></g>
+  </svg></div>
+  <div class="card"><p>That night her ledge was empty, but the valley was not. The bell rang over the snow, the waterfall sang under the ice, and the pines spoke at last.</p><p>And when the owls said good night, Juniper was ready with a fresh jar, because it was the finest echo she had ever heard.</p><h2>The End</h2></div>
+</section>
+</main>
+<script>(function(){
+var mq=window.matchMedia('(max-width:600px),(max-width:820px) and (orientation:portrait)');
+function fit(){
+ document.querySelectorAll('.art svg').forEach(function(s){
+  var vb=s.getAttribute('data-vb');if(!vb){vb=s.getAttribute('viewBox');s.setAttribute('data-vb',vb)}
+  var p=vb.split(' ').map(Number),w=p[2],h=p[3];
+  var bg=null,c=s.firstElementChild;
+  while(c&&c.tagName.toLowerCase()!=='rect'){c=c.nextElementSibling}
+  if(c&&(!c.getAttribute('x')||c.getAttribute('x')==='0')&&(!c.getAttribute('y')||c.getAttribute('y')==='0')&&+c.getAttribute('width')===w){bg=c;if(!bg.hasAttribute('data-h')){bg.setAttribute('data-h',bg.getAttribute('height'))}}
+  if(!mq.matches){s.setAttribute('viewBox',vb);s.setAttribute('preserveAspectRatio','xMidYMid slice');if(bg){bg.setAttribute('y','0');bg.setAttribute('height',bg.getAttribute('data-h'))}return}
+  var r=s.parentNode.getBoundingClientRect(),ratio=r.height/r.width,dy=Math.max(0,w*ratio-h);
+  s.setAttribute('viewBox','0 '+(-dy)+' '+w+' '+(h+dy));
+  s.setAttribute('preserveAspectRatio','xMidYMax slice');
+  if(bg){bg.setAttribute('y',String(-dy));bg.setAttribute('height',String(+bg.getAttribute('data-h')+dy))}
+ });
+}
+fit();window.addEventListener('resize',fit);window.addEventListener('orientationchange',fit);
+if(mq.addEventListener){mq.addEventListener('change',fit)}else if(mq.addListener){mq.addListener(fit)}
+})();</script>
+</body>
+</html>

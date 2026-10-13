@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pocket and the Star Garden</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap">
+<style>
+:root{--paper:#eef2f8;--text:#14213d;--accent:#a8552c;--glow:#ffd68a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0f1a33;--text:#e8edf7;--accent:#f4a259}}
+:root[data-theme="dark"]{--paper:#0f1a33;--text:#e8edf7;--accent:#f4a259}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;scroll-snap-type:y proximity}
+*{box-sizing:border-box;margin:0}
+body{overflow-x:hidden;background:var(--paper);color:var(--text);font-family:"Newsreader",Georgia,serif}
+.spread{min-height:100vh;min-height:100svh;display:grid;grid-template-columns:1.1fr 1fr;background:var(--paper);scroll-snap-align:start}
+.spread.r .art{order:2}
+.art{position:relative;min-height:50vh;overflow:hidden;background:#0c1630}
+.art svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.card{display:flex;flex-direction:column;justify-content:center;padding:10vh 7vw;background:var(--paper);color:var(--text)}
+.card p{font-size:clamp(1.02rem,calc(.9vw + 1.5svh),1.5rem);line-height:1.65;max-width:32em}
+.card p+p{margin-top:1.1em}
+.card em{color:var(--accent)}
+.cover .card{background:#0c1630;color:#f4efe0}
+.cover h1{font:400 clamp(2.6rem,5.4vw,5.4rem)/1 'Young Serif',serif;max-width:9ch;font-weight:400}
+.cover p{font-size:1.25rem;font-style:italic;margin-top:24px;color:#b9c7e0}
+.cover .hint{font-size:1rem;font-style:normal;margin-top:6vh;color:var(--glow)}
+.end h2{font:400 clamp(2.4rem,5vw,4rem)/1 'Young Serif',serif;margin-top:.7em;color:var(--accent);font-weight:400}
+.say{font:400 30px 'Young Serif',serif;fill:#fff;font-weight:400}
+.float,.bob{animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.pulse,.tw{animation:pulse 3.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.5}}
+.sway{transform-box:fill-box;transform-origin:50% 100%;animation:sway 5s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(5deg)}}
+.flick{transform-box:fill-box;transform-origin:50% 100%;animation:flick 1s ease-in-out infinite}
+@keyframes flick{50%{transform:scale(1.12,.9)}}
+.ring{transform-box:fill-box;transform-origin:center;animation:ring 3.6s ease-out infinite}
+@keyframes ring{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.25);opacity:0}}
+.fall{animation:fall 7s linear infinite}
+@keyframes fall{to{transform:translateY(40px)}}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media (max-width:600px),(max-width:820px) and (orientation:portrait){.spread{grid-template-columns:1fr;grid-template-rows:minmax(32svh,1fr) auto}.spread.r .art{order:0}.art{min-height:0}.card{padding:4vh 7vw 6vh}.cover h1{font-size:clamp(2.4rem,13vw,4.4rem)}}
+@media (max-height:560px){.card{padding:5vh 5vw}.card p{font-size:clamp(.95rem,calc(.8vw + 2.4svh),1.2rem);line-height:1.5}.cover h1{font-size:clamp(2.2rem,9vh,3.6rem)}.cover .hint{margin-top:3vh}}
+@media (prefers-reduced-motion:reduce){.float,.bob,.pulse,.tw,.sway,.flick,.ring,.fall{animation:none}html{scroll-behavior:auto}}
+
+@supports (height:100dvh){.spread{min-height:100dvh}}
+@media (max-width:600px),(max-width:820px) and (orientation:portrait){.art{overflow:hidden}.card p{font-size:clamp(1rem,calc(1vw + 1.6svh),1.3rem)}}
+@media (max-width:600px),(max-width:820px) and (orientation:portrait){
+html{scroll-snap-type:y proximity}
+.spread,.spread.cover{display:block;min-height:0;position:static}
+.spread .art,.spread.cover .art{position:relative;inset:auto;display:block;min-height:100vh;min-height:100svh;min-height:100dvh;padding:0;scroll-snap-align:start}
+.spread .art svg,.spread.cover .art svg{position:absolute;inset:0;width:100%;height:100%;max-height:none;border-radius:0;box-shadow:none}
+.spread .card,.spread .page,.spread.cover .card,.spread.cover .page{position:relative;min-height:100vh;min-height:100svh;min-height:100dvh;padding:10vh 8vw;justify-content:center;scroll-snap-align:start}
+.spread .card p,.spread .page p{font-size:clamp(1.1rem,4.6vw,1.45rem);line-height:1.7}
+.spread.cover .card p,.spread.cover .page p{font-size:1.2rem}
+.spread.cover .page{background:#0a1f25;background-image:none}
+}
+</style>
+</head>
+<body><style>.lib-back{position:fixed;z-index:50;top:calc(10px + env(safe-area-inset-top,0px));left:10px;font:600 14px/1 Georgia,serif;text-decoration:none;color:#fff;background:rgba(23,19,47,.82);border:1px solid rgba(255,255,255,.35);padding:9px 14px;border-radius:99px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}.lib-back:hover{background:rgba(23,19,47,.95)}</style><a class="lib-back" href="../index.html">&larr; Library</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="gCity" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14213d"/><stop offset=".6" stop-color="#6a4c93"/><stop offset="1" stop-color="#f4a259"/></linearGradient>
+<linearGradient id="gNight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a1128"/><stop offset="1" stop-color="#25407a"/></linearGradient>
+<linearGradient id="gDeep" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050b1c"/><stop offset="1" stop-color="#1c2a4a"/></linearGradient>
+<linearGradient id="gMorn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fb8e8"/><stop offset="1" stop-color="#ffe1b0"/></linearGradient>
+<radialGradient id="gGlow"><stop offset="0" stop-color="#fff3c4" stop-opacity=".9"/><stop offset="1" stop-color="#fff3c4" stop-opacity="0"/></radialGradient>
+<g id="pocket"><circle cx="-14" cy="-4" r="9" fill="#2b3550"/><circle cx="14" cy="-4" r="9" fill="#2b3550"/><rect x="-24" y="-52" width="48" height="44" rx="10" fill="#9fb4d4"/><circle class="pulse" cy="-30" r="7" fill="#ffd68a"/><rect x="-18" y="-82" width="36" height="28" rx="12" fill="#c9d6e8"/><circle cx="-7" cy="-69" r="4.5" fill="#14213d"/><circle cx="7" cy="-69" r="4.5" fill="#14213d"/><path d="M0-82V-94" stroke="#2b3550" stroke-width="3"/><circle cy="-96" r="4" fill="#f4a259"/><path d="M22-40L38-30" stroke="#9fb4d4" stroke-width="6" stroke-linecap="round"/><g transform="translate(40 -28)"><rect x="-2" y="-8" width="20" height="16" rx="3" fill="#b8683f"/><path d="M18-4L30-12" stroke="#b8683f" stroke-width="4"/><path d="M0-8Q8-18 16-8" stroke="#b8683f" fill="none" stroke-width="3"/></g></g>
+<g id="pot"><path d="M-30 0L-24-38H24L30 0Z" fill="#b8683f"/><rect x="-30" y="-46" width="60" height="10" rx="3" fill="#c98a4b"/><ellipse cy="-46" rx="26" ry="5" fill="#4a3226"/></g>
+<path id="star5" d="M0-30L8-10L30-9L12 5L18 28L0 15L-18 28L-12 5L-30-9L-8-10Z"/>
+<g id="cres"><path d="M0-40A40 40 0 1 0 0 40A26 40 0 1 1 0-40Z" fill="#f4efe0"/></g>
+<g id="stars" fill="#f4efff"><circle class="tw" cx="60" cy="60" r="1.8"/><circle cx="170" cy="130" r="1.3"/><circle class="tw" cx="260" cy="50" r="2"/><circle cx="360" cy="140" r="1.3"/><circle cx="450" cy="70" r="1.8"/><circle cx="540" cy="130" r="1.3"/><circle cx="110" cy="210" r="1.2"/><circle cx="500" cy="220" r="1.5"/></g>
+<g id="roofs" fill="#0f1830"><path d="M0 600V470H50V440H64V470H120V420H180V455H240V430H300V465H360V410H430V450H490V425H540V460H600V600Z"/></g>
+<g id="shoot"><path d="M0 0Q-4-26 0-44" stroke="#4fd08a" stroke-width="5" fill="none" stroke-linecap="round"/><ellipse cx="-10" cy="-34" rx="11" ry="5" fill="#4fd08a" transform="rotate(-30 -10 -34)"/><ellipse cx="10" cy="-42" rx="11" ry="5" fill="#4fd08a" transform="rotate(30 10 -42)"/></g>
+<g id="sb"><circle r="56" fill="url(#gGlow)"/><use href="#star5" fill="#fff3c4" stroke="#ffd68a" stroke-width="2" stroke-linejoin="round"/></g></defs></svg>
+<main>
+<section class="spread cover"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A small robot beside a flowerpot with a tiny glowing star above it"><rect width="600" height="600" fill="url(#gCity)"/><use href="#stars"/><g transform="translate(470 130) scale(.9) rotate(20)"><use href="#cres"/></g><use href="#roofs"/><rect y="510" width="600" height="90" fill="#0a1128"/><g transform="translate(420 535) scale(1.9)"><use href="#pot"/><use href="#shoot" transform="translate(0 -46)"/></g><g transform="translate(420 408) scale(.55)" class="bob"><use href="#sb"/></g><g transform="translate(190 540) scale(2.2)"><use href="#pocket"/></g></svg></div><div class="card"><h1>Pocket and the Star Garden</h1><p>A sequel from the rooftops</p><p class="hint">Scroll to turn the page.</p></div></section>
+<section class="spread"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A tiny silver seed falling toward a flowerpot as a robot looks up"><rect width="600" height="600" fill="url(#gMorn)"/><g transform="translate(110 110) rotate(20) scale(.8)" opacity=".5"><use href="#cres"/></g><use href="#roofs" transform="translate(0 20)"/><rect y="520" width="600" height="80" fill="#3a3358"/><path d="M360 220Q380 300 410 420" stroke="#fff" stroke-width="3" stroke-dasharray="3 9" fill="none" opacity=".8"/><circle cx="360" cy="220" r="7" fill="#e8eeff" stroke="#fff" stroke-width="2"/><g fill="#fff"><path d="M340 200L342 208L350 210L342 212L340 220L338 212L330 210L338 208Z"/></g><g transform="translate(420 548) scale(2)"><use href="#pot"/></g><g transform="translate(190 548) scale(2.2)"><use href="#pocket"/></g></svg></div><div class="card"><p>The morning after the moon bloomed, something tinkled on the rooftop garden. It was a small silver seed, no bigger than a button, and it had landed in the biggest pot.</p></div></section>
+<section class="spread r"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A glowing seed resting in the soil of a pot with a robot peering at it"><rect width="600" height="600" fill="url(#gMorn)"/><use href="#roofs" transform="translate(0 20)"/><rect y="520" width="600" height="80" fill="#3a3358"/><circle class="pulse" cx="330" cy="430" r="90" fill="url(#gGlow)"/><g transform="translate(330 548) scale(2.8)"><use href="#pot"/></g><circle cx="330" cy="422" r="7" fill="#fff3c4"/><g transform="translate(110 556) scale(2.1)"><use href="#pocket"/></g></svg></div><div class="card"><p>“A moon seed!” whispered Pocket. It glowed very faintly, like a thought.</p><p>It wanted to become a star, and a seed like that, as everyone knows, needs three things: <em>water, a song, and someone to wait.</em></p></div></section>
+<section class="spread"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Sun, rain cloud and moon across the sky while a robot waters a pot"><rect width="600" height="600" fill="url(#gMorn)"/><g transform="translate(110 100)"><circle r="26" fill="#ffe08a"/></g><g transform="translate(300 100)" fill="#c9d3e6"><ellipse rx="40" ry="14"/><ellipse cx="-16" cy="-8" rx="20" ry="12"/></g><g transform="translate(480 100) scale(.6)"><use href="#cres"/></g><use href="#roofs" transform="translate(0 30)"/><rect y="525" width="600" height="75" fill="#3a3358"/><g transform="translate(430 548) scale(2.2)"><use href="#pot"/></g><g transform="translate(180 556) scale(2.2)"><use href="#pocket"/></g><g fill="#9fd4f4"><circle cx="262" cy="500" r="3"/><circle cx="290" cy="520" r="3"/><circle cx="330" cy="470" r="3"/></g></svg></div><div class="card"><p>Water was easy. Pocket tipped his can, and the soil drank it. Waiting was harder.</p><p>He waited through sun, and through rain, and through a whole night of owls, and nothing happened at all.</p></div></section>
+<section class="spread r"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A robot humming musical notes while a glowing green shoot grows from a pot"><rect width="600" height="600" fill="url(#gNight)"/><use href="#stars"/><use href="#roofs" transform="translate(0 20)"/><rect y="520" width="600" height="80" fill="#0a1128"/><g transform="translate(400 548) scale(2.4)"><use href="#pot"/><use href="#shoot" transform="translate(0 -46)"/></g><circle class="pulse" cx="400" cy="405" r="60" fill="url(#gGlow)"/><g transform="translate(170 556) scale(2.2)"><use href="#pocket"/></g><g fill="#ffd68a" font-family="serif" font-size="34"><text x="80" y="330">♪</text><text x="200" y="280">♫</text><text x="290" y="350">♪</text></g></svg></div><div class="card"><p>“A song,” said Pocket. He only knew one, which was the clicking hum his wheels made. He hummed it anyway: <em>tick-a-tick, tick-a-tock.</em></p><p>The soil gave a tiny wiggle. A green shoot poked out, and it glowed.</p></div></section>
+<section class="spread"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A robot holding an umbrella over a small glowing shoot in a rainstorm"><rect width="600" height="600" fill="url(#gDeep)"/><g stroke="#9fb4d4" stroke-width="2" opacity=".6"><path d="M60 80l-10 30M140 150l-10 30M230 60l-10 30M330 130l-10 30M450 70l-10 30M540 150l-10 30M90 260l-10 30M500 280l-10 30"/></g><rect y="530" width="600" height="70" fill="#0a1128"/><g transform="translate(400 548) scale(2.4)"><use href="#pot"/><use href="#shoot" transform="translate(0 -46)"/></g><path d="M300 330Q400 250 500 330Z" fill="#c8423b"/><path d="M400 330V420" stroke="#6a4426" stroke-width="4"/><g transform="translate(180 556) scale(2.2)"><use href="#pocket"/></g><path d="M214 470L330 342" stroke="#9fb4d4" stroke-width="5"/></svg></div><div class="card"><p>Then came a cold night with a hard, hard rain. Pocket held his umbrella over the shoot until his chest light dimmed to a flicker.</p><p>He did not move, not even when the wind tried to take the umbrella away.</p></div></section>
+<section class="spread r"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A tall stem with a silver star-flower blooming above a pot at midnight"><rect width="600" height="600" fill="url(#gNight)"/><use href="#stars"/><use href="#roofs" transform="translate(0 20)"/><rect y="530" width="600" height="70" fill="#0a1128"/><path d="M300 500Q290 400 300 290" stroke="#4fd08a" stroke-width="10" fill="none" stroke-linecap="round"/><ellipse cx="270" cy="410" rx="26" ry="10" fill="#4fd08a" transform="rotate(-30 270 410)"/><ellipse cx="332" cy="370" rx="26" ry="10" fill="#4fd08a" transform="rotate(30 332 370)"/><g transform="translate(300 548) scale(2.2)"><use href="#pot"/></g><g transform="translate(300 260) scale(2)" class="bob"><use href="#sb"/></g><g transform="translate(130 556) scale(2)"><use href="#pocket"/></g></svg></div><div class="card"><p>By morning the shoot had grown into a tall stem with a bud at the very top.</p><p>At midnight it opened, one silver point at a time, until a small star was blooming on the roof.</p></div></section>
+<section class="spread"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A glowing star rising from the rooftops into a gap in a constellation"><rect width="600" height="600" fill="url(#gDeep)"/><use href="#stars"/><path d="M110 150L220 230L330 130L440 230" stroke="#ffd68a" stroke-width="2" fill="none" stroke-dasharray="4 7" opacity=".7"/><g fill="#fff3b0"><circle cx="110" cy="150" r="6"/><circle cx="220" cy="230" r="6"/><circle cx="440" cy="230" r="6"/></g><circle cx="330" cy="130" r="9" fill="none" stroke="#ffd68a" stroke-dasharray="3 5"/><path d="M300 520Q320 380 330 150" stroke="#fff3c4" stroke-width="3" stroke-dasharray="3 9" fill="none" opacity=".6"/><g transform="translate(330 140) scale(.9)" class="bob"><use href="#sb"/></g><use href="#roofs" transform="translate(0 40)"/><g transform="translate(180 575) scale(1.8)"><use href="#pocket"/></g></svg></div><div class="card"><p>Looking up, Pocket saw something he had never noticed. In the sky was a dark gap, where a star ought to be.</p><p>The little flower rose, light as a sigh, and slid into the gap with a soft, bright <em>click.</em></p></div></section>
+<section class="spread r end"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A bright star blinking above the rooftops while a robot waves with his can"><rect width="600" height="600" fill="url(#gNight)"/><use href="#stars"/><g transform="translate(300 160)"><circle class="pulse" r="80" fill="url(#gGlow)"/><use href="#star5" fill="#fff3c4" stroke="#ffd68a" stroke-width="2" stroke-linejoin="round"/></g><use href="#roofs"/><rect y="520" width="600" height="80" fill="#0a1128"/><g transform="translate(220 548) scale(2.2)"><use href="#pocket"/></g><g transform="translate(450 548) scale(1.6)"><use href="#pot"/><use href="#shoot" transform="translate(0 -46)"/></g></svg></div><div class="card"><p>Now, on clear nights, if you look above the chimneys, there is a star that blinks twice before the rest, as if to say hello.</p><p>That is Pocket’s star. He waves back with his watering can, every single time.</p><h2>The End</h2></div></section>
+</main>
+<script>(function(){
+var mq=window.matchMedia('(max-width:600px),(max-width:820px) and (orientation:portrait)');
+function fit(){
+ document.querySelectorAll('.art svg').forEach(function(s){
+  var vb=s.getAttribute('data-vb');if(!vb){vb=s.getAttribute('viewBox');s.setAttribute('data-vb',vb)}
+  var p=vb.split(' ').map(Number),w=p[2],h=p[3];
+  var bg=null,c=s.firstElementChild;
+  while(c&&c.tagName.toLowerCase()!=='rect'){c=c.nextElementSibling}
+  if(c&&(!c.getAttribute('x')||c.getAttribute('x')==='0')&&(!c.getAttribute('y')||c.getAttribute('y')==='0')&&+c.getAttribute('width')===w){bg=c;if(!bg.hasAttribute('data-h')){bg.setAttribute('data-h',bg.getAttribute('height'))}}
+  if(!mq.matches){s.setAttribute('viewBox',vb);s.setAttribute('preserveAspectRatio','xMidYMid slice');if(bg){bg.setAttribute('y','0');bg.setAttribute('height',bg.getAttribute('data-h'))}return}
+  var r=s.parentNode.getBoundingClientRect(),ratio=r.height/r.width,dy=Math.max(0,w*ratio-h);
+  s.setAttribute('viewBox','0 '+(-dy)+' '+w+' '+(h+dy));
+  s.setAttribute('preserveAspectRatio','xMidYMax slice');
+  if(bg){bg.setAttribute('y',String(-dy));bg.setAttribute('height',String(+bg.getAttribute('data-h')+dy))}
+ });
+}
+fit();window.addEventListener('resize',fit);window.addEventListener('orientationchange',fit);
+if(mq.addEventListener){mq.addEventListener('change',fit)}else if(mq.addListener){mq.addListener(fit)}
+})();</script>
+</body>
+</html>

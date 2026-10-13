@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hugo Delivers the Mail</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sniglet:wght@800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap">
+<style>
+:root{--paper:#f0fafa;--text:#0f3340;--accent:#d2523b;--glow:#fff1b8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0b2230;--text:#e6f4f4;--accent:#ff8d72}}
+:root[data-theme="dark"]{--paper:#0b2230;--text:#e6f4f4;--accent:#ff8d72}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;scroll-snap-type:y proximity}
+*{box-sizing:border-box;margin:0}
+body{overflow-x:hidden;background:var(--paper);color:var(--text);font-family:"Newsreader",Georgia,serif}
+.spread{min-height:100vh;min-height:100svh;display:grid;grid-template-columns:1.1fr 1fr;background:var(--paper);scroll-snap-align:start}
+.spread.r .art{order:2}
+.art{position:relative;min-height:50vh;overflow:hidden;background:#3fb6c9}
+.art svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.card{display:flex;flex-direction:column;justify-content:center;padding:10vh 7vw;background:var(--paper);color:var(--text)}
+.card p{font-size:clamp(1.02rem,calc(.9vw + 1.5svh),1.5rem);line-height:1.65;max-width:32em}
+.card p+p{margin-top:1.1em}
+.card em{color:var(--accent)}
+.cover .card{background:#0d3b4a;color:#effafa}
+.cover h1{font:800 clamp(3rem,6.5vw,6.5rem)/.95 "Sniglet",sans-serif;max-width:7ch}
+.cover p{font-size:1.25rem;font-style:italic;margin-top:24px;color:#a8e4e0}
+.cover .hint{font-size:1rem;font-style:normal;margin-top:6vh;color:var(--glow)}
+.end h2{font:800 clamp(2.4rem,5vw,4rem)/1 "Sniglet",sans-serif;margin-top:.7em;color:var(--accent)}
+.ss{fill:var(--s,#f2b8a0)}.kk{stroke:var(--k,#ff7f6e)}.cc{fill:var(--c,#f29e4c)}.cs{stroke:var(--c,#f29e4c)}
+.q{font:800 40px "Sniglet",sans-serif;fill:#fff}
+.bub{animation:rise 9s linear infinite}
+@keyframes rise{0%{transform:translateY(30px);opacity:0}20%{opacity:.9}100%{transform:translateY(-70px);opacity:0}}
+.sway{transform-box:fill-box;transform-origin:50% 100%;animation:sway 5s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(5deg)}}
+.pulse{animation:pulse 3.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.55}}
+:focus-visible{outline:3px solid #d2523b;outline-offset:3px}
+@media (max-width:600px),(max-width:820px) and (orientation:portrait){.spread{grid-template-columns:1fr;grid-template-rows:minmax(32svh,1fr) auto}.spread.r .art{order:0}.art{min-height:0}.card{padding:4vh 7vw 6vh}.cover h1{font-size:clamp(2.8rem,15vw,5rem)}}
+@media (max-height:560px){.card{padding:5vh 5vw}.card p{font-size:clamp(.95rem,calc(.8vw + 2.4svh),1.2rem);line-height:1.5}.cover h1{font-size:clamp(2.4rem,9vh,4rem)}.cover .hint{margin-top:3vh}}
+@media (prefers-reduced-motion:reduce){.bub,.sway,.pulse{animation:none}html{scroll-behavior:auto}}
+@supports (height:100dvh){.spread{min-height:100dvh}}
+@media (max-width:600px),(max-width:820px) and (orientation:portrait){.art{overflow:hidden}.card p{font-size:clamp(1rem,calc(1vw + 1.6svh),1.3rem)}}
+@media (max-width:600px),(max-width:820px) and (orientation:portrait){
+html{scroll-snap-type:y proximity}
+.spread,.spread.cover{display:block;min-height:0;position:static}
+.spread .art,.spread.cover .art{position:relative;inset:auto;display:block;min-height:100vh;min-height:100svh;min-height:100dvh;padding:0;scroll-snap-align:start}
+.spread .art svg,.spread.cover .art svg{position:absolute;inset:0;width:100%;height:100%;max-height:none;border-radius:0;box-shadow:none}
+.spread .card,.spread .page,.spread.cover .card,.spread.cover .page{position:relative;min-height:100vh;min-height:100svh;min-height:100dvh;padding:10vh 8vw;justify-content:center;scroll-snap-align:start}
+.spread .card p,.spread .page p{font-size:clamp(1.1rem,4.6vw,1.45rem);line-height:1.7}
+.spread.cover .card p,.spread.cover .page p{font-size:1.2rem}
+.spread.cover .page{background:#0a1f25;background-image:none}
+}
+</style>
+</head>
+<body><style>.lib-back{position:fixed;z-index:50;top:calc(10px + env(safe-area-inset-top,0px));left:10px;font:600 14px/1 Georgia,serif;text-decoration:none;color:#fff;background:rgba(23,19,47,.82);border:1px solid rgba(255,255,255,.35);padding:9px 14px;border-radius:99px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}.lib-back:hover{background:rgba(23,19,47,.95)}</style><a class="lib-back" href="../index.html">&larr; Library</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="gShallow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c4f4ee"/><stop offset="1" stop-color="#3fb6c9"/></linearGradient>
+<linearGradient id="gMid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5fd0d0"/><stop offset="1" stop-color="#1b6ca8"/></linearGradient>
+<linearGradient id="gDusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b4a8a"/><stop offset="1" stop-color="#0d2f5c"/></linearGradient>
+<radialGradient id="gGlow"><stop offset="0" stop-color="#fff6c8" stop-opacity=".95"/><stop offset="1" stop-color="#fff6c8" stop-opacity="0"/></radialGradient>
+<g id="hugo"><path class="cs" d="M-4-24C-6-6-22 0-18 14C-14 24 0 22 0 12C0 4-8 6-8 12" fill="none" stroke-width="10" stroke-linecap="round"/><ellipse class="cc" cx="-2" cy="-52" rx="18" ry="30"/><ellipse cx="6" cy="-50" rx="10" ry="24" fill="#ffe3b0"/><path d="M2-66H12M2-56H12M2-46H12M2-36H12" stroke="#f29e4c" stroke-width="2"/><path class="cc" d="M-16-52Q-34-48-26-36Q-24-46-16-44Z"/><circle class="cc" cy="-84" r="14"/><rect class="cc" x="8" y="-90" width="22" height="8" rx="4"/><circle cx="3" cy="-88" r="3.4" fill="#fff"/><circle cx="4" cy="-88" r="1.8" fill="#0f3340"/><path d="M-14-94Q0-116 14-94Z" fill="#2f4a8a"/><rect x="-16" y="-96" width="32" height="5" rx="2" fill="#1f3468"/><circle cy="-102" r="3" fill="#ffd84d"/><rect x="-36" y="-56" width="22" height="26" rx="4" fill="#c98a4b"/><rect x="-32" y="-64" width="14" height="10" fill="#fff" transform="rotate(-8 -25 -59)"/></g>
+<g id="bottle"><rect x="-8" y="-34" width="16" height="34" rx="6" fill="#bfe8e8" fill-opacity=".55" stroke="#e8fbfb" stroke-width="1.5"/><rect x="-4" y="-44" width="8" height="12" fill="#bfe8e8" fill-opacity=".55" stroke="#e8fbfb"/><rect x="-4" y="-50" width="8" height="7" rx="2" fill="#b8683f"/><rect x="-3" y="-26" width="6" height="20" fill="#fff6d6"/></g>
+<g id="crab"><path d="M-30-14L-44 0M-22-6L-32 4M30-14L44 0M22-6L32 4" stroke="#c4402c" stroke-width="3" stroke-linecap="round"/><ellipse cy="-18" rx="28" ry="18" fill="#e0533d"/><path d="M-16-32V-42M16-32V-42" stroke="#e0533d" stroke-width="3"/><circle cx="-16" cy="-44" r="5" fill="#fff"/><circle cx="16" cy="-44" r="5" fill="#fff"/><circle cx="-16" cy="-44" r="2" fill="#0f3340"/><circle cx="16" cy="-44" r="2" fill="#0f3340"/><circle cx="-40" cy="-32" r="11" fill="#e0533d"/><circle cx="40" cy="-32" r="11" fill="#e0533d"/></g>
+<g id="jelly"><path d="M-22 0C-22-32 22-32 22 0Z" fill="#f6a6d4" fill-opacity=".9"/><path d="M-14 0Q-18 16-12 28M-4 0Q0 16-6 30M6 0Q10 16 4 28M16 0Q18 14 14 26" stroke="#f6a6d4" fill="none" stroke-width="3" stroke-linecap="round"/><circle cx="-7" cy="-12" r="2" fill="#0f3340"/><circle cx="7" cy="-12" r="2" fill="#0f3340"/></g>
+<g id="octo"><path d="M-20-10Q-36 4-24 18M-10-8Q-14 10-6 22M10-8Q14 10 6 22M20-10Q36 4 24 18" stroke="#9a6fd1" stroke-width="8" fill="none" stroke-linecap="round"/><ellipse cy="-34" rx="24" ry="26" fill="#9a6fd1"/><circle cx="-8" cy="-32" r="5" fill="#fff"/><circle cx="8" cy="-32" r="5" fill="#fff"/><circle cx="-8" cy="-31" r="2" fill="#0f3340"/><circle cx="8" cy="-31" r="2" fill="#0f3340"/></g>
+<g id="clam"><path d="M-70 0Q-80-70 0-80Q80-70 70 0Z" fill="#d8b58f"/><path d="M0-80V0M-30-74L-34 0M30-74L34 0M-54-56L-58 0M54-56L58 0" stroke="#b58f67" stroke-width="3" fill="none"/><path d="M-72 0H72L60 18H-60Z" fill="#bf9a73"/></g>
+<g id="clamopen"><path d="M-70 0H70L58 22H-58Z" fill="#bf9a73"/><ellipse cy="-4" rx="62" ry="13" fill="#f4cfe0"/><circle class="pulse" cy="-20" r="46" fill="url(#gGlow)"/><circle cy="-18" r="14" fill="#fffbea"/><path d="M-70-10Q-92-82 0-102Q92-82 70-10Z" fill="#d8b58f"/><path d="M0-102V-12M-32-96L-38-12M32-96L38-12M-56-74L-64-12M56-74L64-12" stroke="#b58f67" stroke-width="3" fill="none"/></g>
+<g id="shouse"><path class="ss" d="M-40 0Q-48-54 0-64Q48-54 40 0Z"/><path d="M0-64V0M-22-56L-26 0M22-56L26 0" stroke="#fff" stroke-opacity=".45" stroke-width="3" fill="none"/><path d="M-10 0V-22Q0-30 10-22V0Z" fill="#4a2f3d"/></g>
+<g id="coral"><path class="kk" d="M0 0V-40M0-20L-16-44M0-28L16-52" stroke-width="8" stroke-linecap="round" fill="none"/></g>
+<g id="kelp"><path class="sway" d="M0 0Q-12-34 0-68T0-136" stroke="#2f9e6a" stroke-width="9" fill="none" stroke-linecap="round"/></g>
+<g id="env"><rect x="-12" y="-8" width="24" height="16" fill="#fff6d6"/><path d="M-12-8L0 2L12-8" stroke="#c98a4b" fill="none" stroke-width="1.5"/></g>
+<g id="bubbles" fill="none" stroke="#fff" stroke-width="2" opacity=".7"><circle class="bub" cx="60" cy="300" r="8"/><circle class="bub" cx="540" cy="260" r="12" style="animation-delay:-3s"/><circle class="bub" cx="120" cy="200" r="5" style="animation-delay:-5s"/><circle class="bub" cx="480" cy="360" r="6" style="animation-delay:-7s"/></g>
+<g id="rays" fill="#fff" opacity=".13"><polygon points="120,0 190,0 330,600 160,600"/><polygon points="330,0 380,0 520,600 400,600"/></g>
+</defs>
+</svg>
+
+<main>
+<section class="spread cover">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A seahorse postman with a mailbag floating between coral on the sea floor">
+    <rect width="600" height="600" fill="url(#gShallow)"/><use href="#rays"/><use href="#bubbles"/>
+    <rect y="520" width="600" height="80" fill="#f2dca4"/>
+    <use href="#kelp" transform="translate(70 530)"/><use href="#kelp" transform="translate(540 530) scale(.8)"/>
+    <use href="#coral" transform="translate(150 530) scale(1.4)"/><use href="#coral" transform="translate(470 530) scale(1.6)" style="--k:#ffb04d"/>
+    <g transform="translate(300 530) scale(2.4)"><use href="#hugo"/></g>
+  </svg></div>
+  <div class="card"><h1>Hugo Delivers the Mail</h1><p>A story from Coral Row</p><p class="hint">Scroll to turn the page.</p></div>
+</section>
+
+<section class="spread">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A seahorse postman in front of a row of shell houses">
+    <rect width="600" height="600" fill="url(#gShallow)"/><use href="#rays"/><use href="#bubbles"/>
+    <rect y="520" width="600" height="80" fill="#f2dca4"/>
+    <use href="#shouse" transform="translate(80 530) scale(1.1)"/><use href="#shouse" transform="translate(430 530) scale(1.7)" style="--s:#a8d8f0"/><use href="#shouse" transform="translate(560 530) scale(1.2)" style="--s:#f6d77a"/>
+    <g transform="translate(240 530) scale(2.1)"><use href="#hugo"/></g>
+  </svg></div>
+  <div class="card"><p>Hugo was the only postman on Coral Row. Every morning he swam from shell to shell with a mailbag made from a sea sponge.</p><p>Mrs. Crab got bills, and pinched every one. The jellyfish twins got party invitations, and had to hold them tight so they would not float away.</p></div>
+</section>
+
+<section class="spread r">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A crab, two jellyfish and an octopus all receiving letters from the seahorse postman">
+    <rect width="600" height="600" fill="url(#gMid)"/><use href="#rays"/><use href="#bubbles"/>
+    <rect y="525" width="600" height="75" fill="#e9c98a"/>
+    <g transform="translate(120 545) scale(1.5)"><use href="#crab"/></g>
+    <g transform="translate(330 270) scale(1.4)"><use href="#jelly"/></g><g transform="translate(450 220) scale(1.1)"><use href="#jelly" style="--x:1"/></g>
+    <g transform="translate(500 548) scale(1.5)"><use href="#octo"/></g>
+    <g transform="translate(300 545) scale(1.7)"><use href="#hugo"/></g>
+    <g transform="translate(170 470)"><use href="#env"/></g>
+  </svg></div>
+  <div class="card"><p>The octopus got eight letters at a time, which was lucky, because she had eight arms. Everyone on Coral Row got mail.</p><p>Except, Hugo sometimes thought, for someone he could not quite name.</p></div>
+</section>
+
+<section class="spread">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A seahorse holding up a bottle with no address while question marks float around">
+    <rect width="600" height="600" fill="url(#gMid)"/><use href="#rays"/><use href="#bubbles"/>
+    <rect y="525" width="600" height="75" fill="#e9c98a"/>
+    <g transform="translate(200 545) scale(2.1)"><use href="#hugo"/></g>
+    <g transform="translate(350 410) rotate(14) scale(2.6)"><use href="#bottle"/></g>
+    <text class="q" x="420" y="250">?</text><text class="q" x="480" y="330" style="font-size:30px">?</text><text class="q" x="380" y="190" style="font-size:26px">?</text>
+    <g transform="translate(500 548) scale(1.2)"><use href="#crab"/></g>
+  </svg></div>
+  <div class="card"><p>One Tuesday, a bottle bobbed into his bag with no name on it, no address, only a note on the cork: <em>For whoever needs it.</em></p><p>Hugo carried it all morning. “Is this yours?” he asked. Mrs. Crab pinched it. The twins said theirs would be glittery. The octopus said it was not hers, and she had checked eight times.</p></div>
+</section>
+
+<section class="spread r">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="At dusk a seahorse carrying a bottle approaches a giant closed clam at the quiet end of the reef">
+    <rect width="600" height="600" fill="url(#gDusk)"/>
+    <g fill="#bfe8e8" opacity=".6"><circle cx="90" cy="120" r="2"/><circle cx="220" cy="80" r="1.6"/><circle cx="400" cy="130" r="2"/><circle cx="520" cy="90" r="1.6"/><circle cx="320" cy="200" r="1.4"/></g>
+    <use href="#bubbles"/>
+    <rect y="525" width="600" height="75" fill="#6a6a8a"/>
+    <use href="#kelp" transform="translate(520 535)" style="opacity:.6"/>
+    <g transform="translate(410 540) scale(2.3)"><use href="#clam"/></g>
+    <g transform="translate(150 545) scale(2)"><use href="#hugo"/></g>
+    <g transform="translate(222 470) rotate(8) scale(1.1)"><use href="#bottle"/></g>
+  </svg></div>
+  <div class="card"><p>At dusk he reached the quiet end of the reef, where Mabel the giant clam lived. Her shell had been shut for years, and she had never once received a letter.</p><p>Hugo felt a bit silly, leaving a bottle at the door of a clam. But he tapped anyway.</p></div>
+</section>
+
+<section class="spread">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A seahorse leaving a bottle on top of a giant closed clam">
+    <rect width="600" height="600" fill="url(#gDusk)"/><use href="#bubbles"/>
+    <rect y="535" width="600" height="65" fill="#6a6a8a"/>
+    <g transform="translate(320 545) scale(2.8)"><use href="#clam"/></g>
+    <g transform="translate(320 322) scale(1.3)"><use href="#bottle"/></g>
+    <g transform="translate(110 548) scale(1.8)"><use href="#hugo"/></g>
+  </svg></div>
+  <div class="card"><p>“Nobody has written to me in a very long time,” said a small voice from inside the shell. “I stopped checking.”</p><p>Hugo set the bottle on top of her shell, and waited, which is the other half of a postman’s job.</p></div>
+</section>
+
+<section class="spread r">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A giant clam opening to reveal a glowing pearl while a seahorse watches">
+    <rect width="600" height="600" fill="url(#gDusk)"/>
+    <circle cx="320" cy="470" r="230" fill="url(#gGlow)" opacity=".5"/>
+    <rect y="535" width="600" height="65" fill="#6a6a8a"/>
+    <g transform="translate(320 545) scale(2.6)"><use href="#clamopen"/></g>
+    <g transform="translate(110 548) scale(1.8)"><use href="#hugo"/></g>
+    <g transform="translate(460 560) rotate(-70) scale(1.2)"><use href="#bottle"/></g>
+  </svg></div>
+  <div class="card"><p>Slowly, the shell opened a crack, then a little more. Mabel reached out, took the bottle, and unrolled the note inside.</p><p>It said only: <em>You are not forgotten.</em> She read it three times. Then the pearl inside her shell lit up, as bright as a small moon.</p></div>
+</section>
+
+<section class="spread">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A seahorse with an overflowing bag of letters swimming past excited reef neighbours">
+    <rect width="600" height="600" fill="url(#gMid)"/><use href="#rays"/><use href="#bubbles"/>
+    <rect y="525" width="600" height="75" fill="#e9c98a"/>
+    <g transform="translate(130 548) scale(1.4)"><use href="#crab"/></g><g transform="translate(470 548) scale(1.4)"><use href="#octo"/></g>
+    <g transform="translate(260 545) scale(2.2)"><use href="#hugo"/></g>
+    <g transform="translate(120 330) rotate(-20)"><use href="#env"/></g><g transform="translate(190 260) rotate(15)"><use href="#env"/></g><g transform="translate(300 220) rotate(-10)"><use href="#env"/></g><g transform="translate(420 280) rotate(20)"><use href="#env"/></g><g transform="translate(500 360) rotate(-15)"><use href="#env"/></g><g transform="translate(370 340) rotate(8)"><use href="#env"/></g>
+    <g transform="translate(450 180) scale(1)"><use href="#jelly"/></g>
+  </svg></div>
+  <div class="card"><p>The next morning, Hugo’s bag was so full he had to swim it over in three trips.</p><p>Mrs. Crab had written a very short letter, and not pinched it. The twins had written a glittery one. The octopus had written eight. The whole reef had gone and found a reason to say hello.</p></div>
+</section>
+
+<section class="spread r end">
+  <div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A glowing pearl lighting up the reef like a streetlamp while a seahorse sends a new bottle out to sea">
+    <rect width="600" height="600" fill="url(#gDusk)"/>
+    <circle cx="320" cy="470" r="280" fill="url(#gGlow)" opacity=".6"/><use href="#bubbles"/>
+    <rect y="535" width="600" height="65" fill="#7a8aa8"/>
+    <use href="#coral" transform="translate(520 545) scale(1.5)" style="--k:#ffb04d"/><use href="#kelp" transform="translate(40 545)"/>
+    <g transform="translate(320 545) scale(2.6)"><use href="#clamopen"/></g>
+    <g transform="translate(120 548) scale(1.8)"><use href="#hugo"/></g>
+    <g transform="translate(70 360) rotate(24) scale(1.4)"><use href="#bottle"/></g>
+  </svg></div>
+  <div class="card"><p>Now Mabel keeps her shell open all day, and her pearl glows over Coral Row like a streetlamp.</p><p>And once a month, Hugo writes one more note, with no name on it, and sets the bottle adrift. <em>For whoever needs it.</em> If you ever find one on the beach, it might be yours.</p><h2>The End</h2></div>
+</section>
+</main>
+<script>(function(){
+var mq=window.matchMedia('(max-width:600px),(max-width:820px) and (orientation:portrait)');
+function fit(){
+ document.querySelectorAll('.art svg').forEach(function(s){
+  var vb=s.getAttribute('data-vb');if(!vb){vb=s.getAttribute('viewBox');s.setAttribute('data-vb',vb)}
+  var p=vb.split(' ').map(Number),w=p[2],h=p[3];
+  var bg=null,c=s.firstElementChild;
+  while(c&&c.tagName.toLowerCase()!=='rect'){c=c.nextElementSibling}
+  if(c&&(!c.getAttribute('x')||c.getAttribute('x')==='0')&&(!c.getAttribute('y')||c.getAttribute('y')==='0')&&+c.getAttribute('width')===w){bg=c;if(!bg.hasAttribute('data-h')){bg.setAttribute('data-h',bg.getAttribute('height'))}}
+  if(!mq.matches){s.setAttribute('viewBox',vb);s.setAttribute('preserveAspectRatio','xMidYMid slice');if(bg){bg.setAttribute('y','0');bg.setAttribute('height',bg.getAttribute('data-h'))}return}
+  var r=s.parentNode.getBoundingClientRect(),ratio=r.height/r.width,dy=Math.max(0,w*ratio-h);
+  s.setAttribute('viewBox','0 '+(-dy)+' '+w+' '+(h+dy));
+  s.setAttribute('preserveAspectRatio','xMidYMax slice');
+  if(bg){bg.setAttribute('y',String(-dy));bg.setAttribute('height',String(+bg.getAttribute('data-h')+dy))}
+ });
+}
+fit();window.addEventListener('resize',fit);window.addEventListener('orientationchange',fit);
+if(mq.addEventListener){mq.addEventListener('change',fit)}else if(mq.addListener){mq.addListener(fit)}
+})();</script>
+</body>
+</html>

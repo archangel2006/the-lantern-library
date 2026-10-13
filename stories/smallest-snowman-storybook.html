@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Smallest Snowman</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grandstander:wght@800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap">
+<style>
+:root{--paper:#f1f6fb;--text:#1f3550;--accent:#d2493a;--glow:#fff3c4;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0f1c2e;--text:#e9f2fb;--accent:#ff8a7a}}
+:root[data-theme="dark"]{--paper:#0f1c2e;--text:#e9f2fb;--accent:#ff8a7a}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;scroll-snap-type:y proximity}
+*{box-sizing:border-box;margin:0}
+body{overflow-x:hidden;background:var(--paper);color:var(--text);font-family:"Newsreader",Georgia,serif}
+.spread{min-height:100vh;min-height:100svh;display:grid;grid-template-columns:1.1fr 1fr;background:var(--paper);scroll-snap-align:start}
+.spread.r .art{order:2}
+.art{position:relative;min-height:50vh;overflow:hidden;background:#bcd4ee}
+.art svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.card{display:flex;flex-direction:column;justify-content:center;padding:10vh 7vw;background:var(--paper);color:var(--text)}
+.card p{font-size:clamp(1.02rem,calc(.9vw + 1.5svh),1.5rem);line-height:1.65;max-width:32em}
+.card p+p{margin-top:1.1em}
+.card em{color:var(--accent)}
+.cover .card{background:#1f3a5a;color:#f4f9ff}
+.cover h1{font:400 clamp(2.4rem,5vw,5rem)/1 'Grandstander',sans-serif;max-width:9ch;font-weight:800}
+.cover p{font-size:1.25rem;font-style:italic;margin-top:24px;color:#bcd4ee}
+.cover .hint{font-size:1rem;font-style:normal;margin-top:6vh;color:var(--glow)}
+.end h2{font:400 clamp(2.4rem,5vw,4rem)/1 'Grandstander',sans-serif;margin-top:.7em;color:var(--accent);font-weight:800}
+.say{font:400 30px 'Grandstander',sans-serif;fill:#fff;font-weight:800}
+.float,.bob{animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.pulse,.tw{animation:pulse 3.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.5}}
+.sway{transform-box:fill-box;transform-origin:50% 100%;animation:sway 5s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(5deg)}}
+.flick{transform-box:fill-box;transform-origin:50% 100%;animation:flick 1s ease-in-out infinite}
+@keyframes flick{50%{transform:scale(1.12,.9)}}
+.ring{transform-box:fill-box;transform-origin:center;animation:ring 3.6s ease-out infinite}
+@keyframes ring{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.25);opacity:0}}
+.fall{animation:fall 7s linear infinite}
+@keyframes fall{to{transform:translateY(40px)}}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media (max-width:600px),(max-width:820px) and (orientation:portrait){.spread{grid-template-columns:1fr;grid-template-rows:minmax(32svh,1fr) auto}.spread.r .art{order:0}.art{min-height:0}.card{padding:4vh 7vw 6vh}.cover h1{font-size:clamp(2.4rem,13vw,4.4rem)}}
+@media (max-height:560px){.card{padding:5vh 5vw}.card p{font-size:clamp(.95rem,calc(.8vw + 2.4svh),1.2rem);line-height:1.5}.cover h1{font-size:clamp(2.2rem,9vh,3.6rem)}.cover .hint{margin-top:3vh}}
+@media (prefers-reduced-motion:reduce){.float,.bob,.pulse,.tw,.sway,.flick,.ring,.fall{animation:none}html{scroll-behavior:auto}}
+
+@supports (height:100dvh){.spread{min-height:100dvh}}
+@media (max-width:600px),(max-width:820px) and (orientation:portrait){.art{overflow:hidden}.card p{font-size:clamp(1rem,calc(1vw + 1.6svh),1.3rem)}}
+@media (max-width:600px),(max-width:820px) and (orientation:portrait){
+html{scroll-snap-type:y proximity}
+.spread,.spread.cover{display:block;min-height:0;position:static}
+.spread .art,.spread.cover .art{position:relative;inset:auto;display:block;min-height:100vh;min-height:100svh;min-height:100dvh;padding:0;scroll-snap-align:start}
+.spread .art svg,.spread.cover .art svg{position:absolute;inset:0;width:100%;height:100%;max-height:none;border-radius:0;box-shadow:none}
+.spread .card,.spread .page,.spread.cover .card,.spread.cover .page{position:relative;min-height:100vh;min-height:100svh;min-height:100dvh;padding:10vh 8vw;justify-content:center;scroll-snap-align:start}
+.spread .card p,.spread .page p{font-size:clamp(1.1rem,4.6vw,1.45rem);line-height:1.7}
+.spread.cover .card p,.spread.cover .page p{font-size:1.2rem}
+.spread.cover .page{background:#0a1f25;background-image:none}
+}
+</style>
+</head>
+<body><style>.lib-back{position:fixed;z-index:50;top:calc(10px + env(safe-area-inset-top,0px));left:10px;font:600 14px/1 Georgia,serif;text-decoration:none;color:#fff;background:rgba(23,19,47,.82);border:1px solid rgba(255,255,255,.35);padding:9px 14px;border-radius:99px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}.lib-back:hover{background:rgba(23,19,47,.95)}</style><a class="lib-back" href="../index.html">&larr; Library</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="gWin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a8c4e6"/><stop offset="1" stop-color="#eef5fb"/></linearGradient>
+<linearGradient id="gSpr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fcdf0"/><stop offset="1" stop-color="#eaf7cf"/></linearGradient>
+<linearGradient id="gSea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4aa6d8"/><stop offset="1" stop-color="#1b5a98"/></linearGradient>
+<radialGradient id="gSun"><stop offset="0" stop-color="#fff3a8" stop-opacity=".95"/><stop offset="1" stop-color="#fff3a8" stop-opacity="0"/></radialGradient>
+<g id="sm"><circle cy="-16" r="16" fill="#fff" stroke="#cfe0f2" stroke-width="2"/><circle cy="-40" r="11" fill="#fff" stroke="#cfe0f2" stroke-width="2"/><path d="M-12-30Q0-24 12-30L13-26Q0-20-13-26Z" fill="#d2493a"/><path d="M8-28L12-16L5-17Z" fill="#d2493a"/><circle cx="-4" cy="-43" r="1.8" fill="#1f3550"/><circle cx="4" cy="-43" r="1.8" fill="#1f3550"/><path d="M0-40L10-38L0-37Z" fill="#f08a2a"/><path d="M-16-18L-30-26M16-18L30-26" stroke="#6a4a2a" stroke-width="2.4" stroke-linecap="round"/><circle cy="-14" r="1.4" fill="#1f3550"/><circle cy="-8" r="1.4" fill="#1f3550"/></g>
+<g id="sp"><path d="M-12-14L-28-8L-12-6Z" fill="#6a4a2a"/><ellipse cy="-14" rx="14" ry="11" fill="#8a6a4a"/><ellipse cy="-10" rx="9" ry="7" fill="#e8d9b8"/><path d="M-4-16Q6-28 12-14Z" fill="#6a4a2a"/><circle cx="12" cy="-22" r="8" fill="#8a6a4a"/><path d="M18-22L27-20L18-18Z" fill="#e0993f"/><circle cx="14" cy="-24" r="1.7" fill="#1f3550"/><path d="M-3-3V3M4-3V3" stroke="#e0993f" stroke-width="2"/></g>
+<g id="ines"><rect x="-12" y="-6" width="10" height="9" rx="2" fill="#3a2a2a"/><rect x="2" y="-6" width="10" height="9" rx="2" fill="#3a2a2a"/><path d="M-14-46H14L19-6H-19Z" fill="#3a8f5a"/><path d="M14-40L30-56" stroke="#3a8f5a" stroke-width="6" stroke-linecap="round"/><circle cx="31" cy="-58" r="5" fill="#d2493a"/><circle cy="-58" r="11" fill="#f0c9a0"/><path d="M-12-60Q0-80 12-60Z" fill="#d2493a"/><circle cy="-80" r="5" fill="#fff"/><path d="M-11-50Q0-44 11-50L12-46Q0-40-12-46Z" fill="#fff6e0"/><circle cx="-4" cy="-58" r="1.6" fill="#1f3550"/><circle cx="4" cy="-58" r="1.6" fill="#1f3550"/><path d="M-3-53Q0-50 3-53" stroke="#1f3550" stroke-width="1.3" fill="none"/></g>
+<g id="dropc"><path d="M0-22C12-6 16 4 0 14C-16 4-12-6 0-22Z" fill="#9fd0f0" stroke="#e8f6ff" stroke-width="2"/><circle cx="-4" cy="-2" r="2" fill="#1f3550"/><circle cx="4" cy="-2" r="2" fill="#1f3550"/><path d="M-9 6Q0 10 9 6" stroke="#d2493a" stroke-width="2.5" fill="none"/></g>
+<g id="flake" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M0-9V9M-8-4L8 4M-8 4L8-4"/></g>
+<g id="flakes"><g class="fall"><use href="#flake" transform="translate(60 40)"/><use href="#flake" transform="translate(180 110) scale(.8)"/><use href="#flake" transform="translate(300 30)"/><use href="#flake" transform="translate(420 120) scale(1.2)"/><use href="#flake" transform="translate(540 50)"/><use href="#flake" transform="translate(110 220)"/><use href="#flake" transform="translate(480 250) scale(.8)"/><use href="#flake" transform="translate(240 280)"/></g></g>
+<g id="sill"><rect x="-300" y="0" width="600" height="20" fill="#9a8a7a"/><path d="M-300 0Q-200-24-100-8T100-8T300 0V4H-300Z" fill="#fff"/></g></defs></svg>
+<main>
+<section class="spread cover"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A tiny snowman with a red scarf on a snowy windowsill with a sparrow beside him"><rect width="600" height="600" fill="url(#gWin)"/><use href="#flakes"/><rect x="0" y="500" width="600" height="100" fill="#8a7a6a"/><g transform="translate(300 500)"><use href="#sill"/></g><g transform="translate(300 492) scale(3.4)"><use href="#sm"/></g><g transform="translate(130 494) scale(1.8)"><use href="#sp"/></g></svg></div><div class="card"><h1>The Smallest Snowman</h1><p>A winter story about where the snow goes</p><p class="hint">Scroll to turn the page.</p></div></section>
+<section class="spread"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A girl in a red hat placing a tiny snowman on a windowsill"><rect width="600" height="600" fill="url(#gWin)"/><use href="#flakes"/><rect x="330" y="120" width="270" height="380" fill="#ffe9a8"/><path d="M465 120V500M330 310H600" stroke="#8a7a6a" stroke-width="10"/><rect x="320" y="110" width="290" height="390" fill="none" stroke="#8a7a6a" stroke-width="14"/><g transform="translate(470 500) scale(.9)"><use href="#sill"/></g><g transform="translate(470 496) scale(2.4)"><use href="#sm"/></g><g transform="translate(150 565) scale(2.2)"><use href="#ines"/></g></svg></div><div class="card"><p>One winter morning, a girl named Ines made the smallest snowman in the world. He was no taller than a teacup, with two coal eyes, a carrot nose, and a scarf made from a strip of red ribbon.</p><p>She set him carefully on the windowsill and said, “You look after the garden.”</p></div></section>
+<section class="spread r"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A tiny snowman opening his eyes as a sparrow lands beside him"><rect width="600" height="600" fill="url(#gWin)"/><use href="#flakes"/><rect y="500" width="600" height="100" fill="#8a7a6a"/><g transform="translate(300 500)"><use href="#sill"/></g><g transform="translate(250 492) scale(3.4)"><use href="#sm"/></g><g transform="translate(470 494) scale(2)"><use href="#sp"/></g><g fill="#fff3c4"><path d="M130 250L132 258L140 260L132 262L130 270L128 262L120 260L128 258Z"/><path d="M400 300L402 306L408 308L402 310L400 316L398 310L392 308L398 306Z"/></g><text class="say" x="60" y="140" style="font-size:30px;fill:#1f3550">Hello?</text></svg></div><div class="card"><p>The snowman opened his eyes. It was very bright and very cold, which suited him perfectly. A sparrow landed beside him.</p><p>“Hello,” said the snowman. “I’m new. What happens next?” “Next,” said the sparrow, “is spring.”</p></div></section>
+<section class="spread"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A snowman dreaming of spring with flowers, green grass and a warm sun in a thought bubble"><rect width="600" height="600" fill="url(#gWin)"/><rect y="500" width="600" height="100" fill="#8a7a6a"/><g transform="translate(200 500) scale(.8)"><use href="#sill"/></g><g transform="translate(190 492) scale(3)"><use href="#sm"/></g><circle cx="410" cy="190" r="120" fill="#eaf7cf" stroke="#fff" stroke-width="6"/><circle cx="430" cy="140" r="18" fill="#ffd84d"/><g fill="#f08aa0"><circle cx="360" cy="240" r="9"/><circle cx="400" cy="256" r="9"/><circle cx="446" cy="244" r="9"/></g><path d="M340 270Q410 250 480 270V300H340Z" fill="#6fb35a"/><circle cx="260" cy="340" r="6" fill="#fff"/><circle cx="240" cy="372" r="4" fill="#fff"/><g transform="translate(450 494) scale(2)"><use href="#sp"/></g></svg></div><div class="card"><p>“What’s spring?” asked the snowman. “Oh, it’s the best,” said the sparrow. “Flowers, and green, and warm days that go on and on.”</p><p>The snowman imagined it all, and wanted very much to see it. He did not know that he was made of exactly the stuff that spring takes away.</p></div></section>
+<section class="spread r"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A smaller snowman melting in the sun on a windowsill with a worried sparrow"><rect width="600" height="600" fill="url(#gSpr)"/><circle cx="130" cy="120" r="120" fill="url(#gSun)"/><circle cx="130" cy="120" r="46" fill="#ffd84d"/><rect y="500" width="600" height="100" fill="#8a7a6a"/><g transform="translate(300 500)"><use href="#sill"/></g><ellipse cx="300" cy="500" rx="90" ry="12" fill="#9fd0f0" opacity=".8"/><g transform="translate(300 496) scale(2.2)"><use href="#sm"/></g><g fill="#9fd0f0"><use href="#dropc" transform="translate(240 540) scale(.4)"/><circle cx="360" cy="540" r="4"/><circle cx="380" cy="568" r="4"/></g><g transform="translate(470 494) scale(2)"><use href="#sp"/></g></svg></div><div class="card"><p>The days grew longer. The sun grew warmer. Each morning the snowman felt a little smaller, and each noon there was another drip from the windowsill.</p><p>“Is this normal?” he asked. The sparrow looked at the sky, and was very quiet.</p></div></section>
+<section class="spread"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A tiny snowman in a puddle on the windowsill comforted by a fluffed-up sparrow"><rect width="600" height="600" fill="url(#gSpr)"/><rect y="500" width="600" height="100" fill="#8a7a6a"/><g transform="translate(300 500)"><use href="#sill"/></g><ellipse cx="300" cy="506" rx="110" ry="14" fill="#9fd0f0"/><g transform="translate(300 500) scale(1.2)"><use href="#sm"/></g><g transform="translate(470 494) scale(2.2)"><use href="#sp"/></g><g fill="#fff3c4"><path d="M120 250L122 258L130 260L122 262L120 270L118 262L110 260L118 258Z"/></g><text class="say" x="60" y="150" style="font-size:26px;fill:#1f3550">snow never goes...</text></svg></div><div class="card"><p>“I think I’m going,” said the snowman, who was now the size of a walnut. “And I haven’t seen spring.”</p><p>The sparrow fluffed up beside him. “You’re not going,” said the sparrow. “Snow never goes. It only travels.”</p></div></section>
+<section class="spread r"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A drop with a red thread of scarf riding a stream down toward the sea"><rect width="600" height="600" fill="url(#gSpr)"/><path d="M60 0V160" stroke="#8a8a98" stroke-width="22"/><path d="M60 160Q60 220 160 230T330 280T360 400T470 440" stroke="#4aa6d8" stroke-width="26" fill="none" stroke-linecap="round"/><rect y="440" width="600" height="160" fill="url(#gSea)"/><path d="M0 470q25-10 50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0" stroke="#fff" stroke-width="3" fill="none" opacity=".6"/><g transform="translate(250 270) scale(1.8)" class="bob"><use href="#dropc"/></g><g fill="#3fa070"><ellipse cx="120" cy="340" rx="30" ry="14"/><ellipse cx="500" cy="330" rx="30" ry="14"/></g><g transform="translate(460 360) scale(.7)"><ellipse rx="22" ry="12" fill="#6fb35a"/><circle cx="12" cy="-10" r="8" fill="#6fb35a"/></g></svg></div><div class="card"><p>So the snowman, who was now one bright drop, rolled off the sill, slipped down the gutter, and set off.</p><p>He went down a stream and along a river, past ducks and a mill and one very surprised frog, and out into the wide blue sea.</p></div></section>
+<section class="spread"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A cloud with two dark eyes and a thread of red scarf, floating over the sea in the sun"><rect width="600" height="600" fill="url(#gSpr)"/><circle cx="480" cy="110" r="110" fill="url(#gSun)"/><circle cx="480" cy="110" r="40" fill="#ffd84d"/><rect y="440" width="600" height="160" fill="url(#gSea)"/><g stroke="#fff" stroke-width="3" opacity=".6" stroke-linecap="round"><path d="M220 440V360M260 440V330M300 440V340"/></g><g transform="translate(260 230)" fill="#fff"><ellipse rx="90" ry="34"/><ellipse cx="-40" cy="-22" rx="44" ry="30"/><ellipse cx="30" cy="-30" rx="52" ry="34"/><circle cx="-14" cy="-6" r="5" fill="#1f3550"/><circle cx="14" cy="-6" r="5" fill="#1f3550"/><path d="M-30 14Q-60 30-70 10" stroke="#d2493a" stroke-width="5" fill="none"/></g><g fill="#f08aa0"><circle cx="70" cy="560" r="7"/><circle cx="520" cy="570" r="7"/></g></svg></div><div class="card"><p>In the sea, he was warm for the first time. The sun lifted him up, as a mist, higher than the rooftops, and he became a cloud with two coal-dark eyes.</p><p>Below him, the garden was full of crocuses and green and yellow, and he saw every bit of it. It was spring after all.</p></div></section>
+<section class="spread r end"><div class="art"><svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A new tiny snowman on the windowsill as a girl smiles and a snowflake with a red thread falls"><rect width="600" height="600" fill="url(#gWin)"/><use href="#flakes"/><rect x="0" y="500" width="600" height="100" fill="#8a7a6a"/><g transform="translate(300 500)"><use href="#sill"/></g><g transform="translate(300 492) scale(3.4)"><use href="#sm"/></g><g transform="translate(120 494) scale(1.8)"><use href="#sp"/></g><g transform="translate(500 596) scale(2)"><use href="#ines"/></g><g transform="translate(130 160) scale(3)"><use href="#flake"/></g><path d="M130 166L126 172" stroke="#d2493a" stroke-width="3" stroke-linecap="round"/></svg></div><div class="card"><p>When winter came again, a single snowflake landed on Ines’s windowsill, and she looked at it closely. In its middle was one tiny thread of red.</p><p>She smiled, scooped up some snow, and made the smallest snowman in the world. “Welcome back,” she said.</p><h2>The End</h2></div></section>
+</main>
+<script>(function(){
+var mq=window.matchMedia('(max-width:600px),(max-width:820px) and (orientation:portrait)');
+function fit(){
+ document.querySelectorAll('.art svg').forEach(function(s){
+  var vb=s.getAttribute('data-vb');if(!vb){vb=s.getAttribute('viewBox');s.setAttribute('data-vb',vb)}
+  var p=vb.split(' ').map(Number),w=p[2],h=p[3];
+  var bg=null,c=s.firstElementChild;
+  while(c&&c.tagName.toLowerCase()!=='rect'){c=c.nextElementSibling}
+  if(c&&(!c.getAttribute('x')||c.getAttribute('x')==='0')&&(!c.getAttribute('y')||c.getAttribute('y')==='0')&&+c.getAttribute('width')===w){bg=c;if(!bg.hasAttribute('data-h')){bg.setAttribute('data-h',bg.getAttribute('height'))}}
+  if(!mq.matches){s.setAttribute('viewBox',vb);s.setAttribute('preserveAspectRatio','xMidYMid slice');if(bg){bg.setAttribute('y','0');bg.setAttribute('height',bg.getAttribute('data-h'))}return}
+  var r=s.parentNode.getBoundingClientRect(),ratio=r.height/r.width,dy=Math.max(0,w*ratio-h);
+  s.setAttribute('viewBox','0 '+(-dy)+' '+w+' '+(h+dy));
+  s.setAttribute('preserveAspectRatio','xMidYMax slice');
+  if(bg){bg.setAttribute('y',String(-dy));bg.setAttribute('height',String(+bg.getAttribute('data-h')+dy))}
+ });
+}
+fit();window.addEventListener('resize',fit);window.addEventListener('orientationchange',fit);
+if(mq.addEventListener){mq.addEventListener('change',fit)}else if(mq.addListener){mq.addListener(fit)}
+})();</script>
+</body>
+</html>
